@@ -1,7 +1,124 @@
 {
-    "metric_id_list": [
-        123,
-        456,
-        789
+	"description": "To be defined",
+    "group": "hista2_k1",
+    "columns": [
+    	{
+    		"name": "Institute",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "str"
+    		}
+    	},
+    	{
+    		"name": "Model",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "str"
+    		}
+    	},
+    	{
+    		"name": "Var",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "str"
+    		}
+    	},
+    	{
+    		"name": "Freq",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "str"
+    		}
+    	},
+    	{
+    		"name": "R",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "float:3",
+    			"min": -1.0,
+    			"max": 1.0
+    		}
+    	},
+    	{
+    		"name": "RMSE",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "float:3",
+    			"min": -1.0,
+    			"max": 1.0
+    		}
+    	},
+    	{
+    		"name": "RI",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "float:3",
+    			"min": -1.0,
+    			"max": 1.0
+    		}
+    	},
+    	{
+    		"name": "AE",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "float:3",
+    			"min": -1.0,
+    			"max": 1.0
+    		}
+    	},
+    	{
+    		"name": "AAE",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "float:3",
+    			"min": -1.0,
+    			"max": 1.0
+    		}
+    	},
+    	{
+    		"name": "MEF",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "float:3",
+    			"min": -1.0,
+    			"max": 1.0
+    		}
+    	},
+    	{
+    		"name": "STDobs",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "float:3",
+    			"min": -1.0,
+    			"max": 1.0
+    		}
+    	},
+    	{
+    		"name": "STDmod",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "float:3",
+    			"min": -1.0,
+    			"max": 1.0
+    		}
+    	},
+    	{
+    		"name": "cRMSE",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "float:3",
+    			"min": -1.0,
+    			"max": 1.0
+    		}
+    	},
+    	{
+    		"name": "Rb",
+    		"description": "To be defined",
+    		"constraints": {
+    			"type": "float:3",
+    			"min": -1.0,
+    			"max": 1.0
+    		}
+    	},
     ]
 }
