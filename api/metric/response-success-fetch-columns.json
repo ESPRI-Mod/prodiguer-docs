@@ -1,0 +1,5 @@
+{
+    "status": 0,
+    "columns": ["Institute", "Model", "Var", "Freq", "R", "RMSE", "RI", "AE", "AAE", "MEF", "STDobs", "STDmod", "cRMSE", "Rb", "metric_id"],
+    "group": "hista2_k1"
+}

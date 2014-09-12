@@ -1,6 +1,6 @@
 {
     "status": 0,
-    "group": "hista2_k1",
+    "error": "hista2_k1",
     "columns": ["Institute", "Model", "Var", "Freq", "R", "RMSE", "RI", "AE", "AAE", "MEF", "STDobs", "STDmod", "cRMSE", "Rb", "metric_id"],
     "metrics": [
         ["UBERN", "CCSM3", "BLTmax", "yr", "0.5056", "468.9591", "8.9704", "99.3248", "163.8646", "-9.1399", "147.2716", "514.8156", "458.3200", "1.5192", 2872],
