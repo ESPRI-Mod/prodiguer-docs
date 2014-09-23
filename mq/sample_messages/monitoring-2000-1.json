@@ -1,0 +1,16 @@
+{
+    "command": "IGCM_config_Initialize",
+    "job": {
+        "uid": "75e3ad4c-fe93-4ab2-9730-a782b114f791"
+    },
+    "msg": {
+        "application": "monitoring",
+        "code": "2000",
+        "producer": "libigcm",
+        "timestamp": "2014-09-15T10:53:06.726575579",
+        "uid": "aa50fe90-0e71-4fd3-89ae-aa2f23ad1ea8"
+    },
+    "simulation": {
+        "uid": "817f02cc-02cc-4de7-b3df-b027548dbb29"
+    }
+}

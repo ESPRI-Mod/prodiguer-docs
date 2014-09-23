@@ -1,0 +1,20 @@
+{
+    "activity": "IPSL",
+    "centre": "TGCC",
+    "cumulPeriod": "",
+    "endDate": "1859-12-31",
+    "experiment": "piControl",
+    "jobuid": "75e3ad4c-fe93-4ab2-9730-a782b114f791",
+    "login": "p86denv",
+    "machine": "curie",
+    "model": "IPSLCM6",
+    "msgApplication": "monitoring",
+    "msgCode": "1100",
+    "msgProducer": "libigcm",
+    "msgTimestamp": "2014-09-15T20:29:54.055984030",
+    "msgUID": "92acdfe7-4005-445f-a0b9-bfd262dc8a4a",
+    "name": "CM6PI.03",
+    "simuid": "817f02cc-02cc-4de7-b3df-b027548dbb29",
+    "space": "TEST",
+    "startDate": "1850-01-01"
+}

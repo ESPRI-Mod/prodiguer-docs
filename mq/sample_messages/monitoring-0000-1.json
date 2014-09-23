@@ -1,0 +1,26 @@
+{
+    "job": {
+        "uid": "75e3ad4c-fe93-4ab2-9730-a782b114f791"
+    },
+    "msg": {
+        "application": "monitoring",
+        "code": "0100",
+        "producer": "libigcm",
+        "timestamp": "2014-09-15T10:53:06.626750180",
+        "uid": "1f39ba53-01a0-41d4-a22f-2607d216989c"
+    },
+    "simulation": {
+        "activity": "IPSL",
+        "centre": "TGCC",
+        "cumulPeriod": "",
+        "endDate": "1859-12-31",
+        "experiment": "piControl",
+        "login": "p86denv",
+        "machine": "curie",
+        "model": "IPSLCM6",
+        "name": "CM6PI.03",
+        "space": "TEST",
+        "startDate": "1850-01-01",
+        "uid": "817f02cc-02cc-4de7-b3df-b027548dbb29"
+    }
+}

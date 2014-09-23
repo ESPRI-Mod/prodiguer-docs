@@ -1,0 +1,15 @@
+{
+    "job": {
+    	"uid": "75e3ad4c-fe93-4ab2-9730-a782b114f791",
+    },
+    "msg": {
+        "application": "monitoring",
+        "code": "1100",
+        "producer": "libigcm",
+        "timestamp": "2014-09-15T20:29:54.055984030",
+        "uid": "92acdfe7-4005-445f-a0b9-bfd262dc8a4a"
+    },
+    "simulation": {
+        "uid": "817f02cc-02cc-4de7-b3df-b027548dbb29"
+    }
+}
