@@ -16,7 +16,7 @@ group = "tos_2-5x2-5_esmf_linear_metrics"
 # Set fields.
 fields = []
 fields += metrics_in["GFDL-ESM2G"]["SimulationDescription"].keys()
-fields += ["realm", "source"]
+fields += ["realm", "source", "RegionalMasking"]
 fields += metrics_in["GFDL-ESM2G"]["defaultReference"]["r1i1p1"]["global"].keys()
 
 # Set lines.
@@ -26,6 +26,7 @@ for realm, metrics in metrics_in["GFDL-ESM2G"]["defaultReference"]["r1i1p1"].ite
 	line += metrics_in["GFDL-ESM2G"]["SimulationDescription"].values()
 	line.append(realm)
 	line.append(metrics_in["GFDL-ESM2G"]["defaultReference"]["source"])
+	line.append(metrics_in["RegionalMasking"][realm])
 	line += metrics_in["GFDL-ESM2G"]["defaultReference"]["r1i1p1"]["global"].values()
 	lines.append(line)
 
