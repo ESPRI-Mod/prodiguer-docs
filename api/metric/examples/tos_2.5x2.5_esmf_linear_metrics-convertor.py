@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import json, os
+import collections, json, os
 
 
 
@@ -8,7 +8,7 @@ _FPATH = os.path.abspath(__file__).replace("-convertor.py", ".json")
 
 # Set input metrics.
 with open(_FPATH, 'r') as ifile:
-	metrics_in = json.loads(ifile.read())
+	metrics_in = json.loads(ifile.read(), object_pairs_hook=collections.OrderedDict)
 
 # Set group.
 group = "tos_2-5x2-5_esmf_linear_metrics"
