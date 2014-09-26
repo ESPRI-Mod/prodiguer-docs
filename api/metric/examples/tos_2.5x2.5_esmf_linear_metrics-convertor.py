@@ -11,7 +11,7 @@ with open(_FPATH, 'r') as ifile:
 	metrics_in = json.loads(ifile.read())
 
 # Set group.
-group = "tos_2.5x2.5_esmf_linear_metrics"
+group = "tos_2-5x2-5_esmf_linear_metrics"
 
 # Set fields.
 fields = []
