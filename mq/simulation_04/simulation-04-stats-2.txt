@@ -9,43 +9,25 @@ FILE 1: JSON INVALID: 0
 FILE 1: ATTACHMENT: 5260
 --------------------------------------------------------------------------------------
 /Users/macg/dev/prodiguer/repos/prodiguer-docs/mq/simulation_04/simulation-04-email-2.eml
-FILE 2: BASE64 TOTAL: 1
-FILE 2: BASE64 VALID: 1
+FILE 2: BASE64 TOTAL: 2
+FILE 2: BASE64 VALID: 2
 FILE 2: BASE64 INVALID: 0
-FILE 2: JSON TOTAL: 1
-FILE 2: JSON VALID: 1
+FILE 2: JSON TOTAL: 2
+FILE 2: JSON VALID: 2
 FILE 2: JSON INVALID: 0
-FILE 2: ATTACHMENT: 5260
 --------------------------------------------------------------------------------------
 /Users/macg/dev/prodiguer/repos/prodiguer-docs/mq/simulation_04/simulation-04-email-3.eml
-FILE 3: BASE64 TOTAL: 1
-FILE 3: BASE64 VALID: 1
+FILE 3: BASE64 TOTAL: 11733
+FILE 3: BASE64 VALID: 11733
 FILE 3: BASE64 INVALID: 0
-FILE 3: JSON TOTAL: 1
-FILE 3: JSON VALID: 1
+FILE 3: JSON TOTAL: 11733
+FILE 3: JSON VALID: 11733
 FILE 3: JSON INVALID: 0
-FILE 3: ATTACHMENT: 5260
 --------------------------------------------------------------------------------------
 /Users/macg/dev/prodiguer/repos/prodiguer-docs/mq/simulation_04/simulation-04-email-4.eml
-FILE 4: BASE64 TOTAL: 2
-FILE 4: BASE64 VALID: 2
+FILE 4: BASE64 TOTAL: 11793
+FILE 4: BASE64 VALID: 11793
 FILE 4: BASE64 INVALID: 0
-FILE 4: JSON TOTAL: 2
-FILE 4: JSON VALID: 2
+FILE 4: JSON TOTAL: 11793
+FILE 4: JSON VALID: 11793
 FILE 4: JSON INVALID: 0
---------------------------------------------------------------------------------------
-/Users/macg/dev/prodiguer/repos/prodiguer-docs/mq/simulation_04/simulation-04-email-5.eml
-FILE 5: BASE64 TOTAL: 11733
-FILE 5: BASE64 VALID: 11733
-FILE 5: BASE64 INVALID: 0
-FILE 5: JSON TOTAL: 11733
-FILE 5: JSON VALID: 11733
-FILE 5: JSON INVALID: 0
---------------------------------------------------------------------------------------
-/Users/macg/dev/prodiguer/repos/prodiguer-docs/mq/simulation_04/simulation-04-email-6.eml
-FILE 6: BASE64 TOTAL: 11793
-FILE 6: BASE64 VALID: 11793
-FILE 6: BASE64 INVALID: 0
-FILE 6: JSON TOTAL: 11793
-FILE 6: JSON VALID: 11793
-FILE 6: JSON INVALID: 0

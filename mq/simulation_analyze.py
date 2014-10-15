@@ -117,11 +117,8 @@ def _write_stats_2(stats, fid, fpath, content, attachment):
 def _write_trace(trace, fid, messages):
     """Writes email file trace."""
     for msg in messages:
-        trace.write("{0},'{1}',{2},{3},{4}\n".format(fid,
-                                               msg['msgCode'],
-                                               msg['msgUID'],
-                                               msg['msgTimestamp'],
-                                               msg['simuid']))
+        trace.write("{0}, '{1}', {2}, {3}, {4}\n".format(
+            fid, msg['msgCode'], msg['msgUID'], msg['msgTimestamp'], msg['simuid']))
 
 
 # Set sim id.
