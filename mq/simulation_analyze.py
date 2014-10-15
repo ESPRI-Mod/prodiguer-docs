@@ -2,6 +2,41 @@ import base64, email, glob, json, os, sys
 
 
 
+# Message types:
+# ... general message types.
+MESSAGE_TYPE_GENERAL_API = "-2000"
+MESSAGE_TYPE_GENERAL_SMTP = "-1000"
+MESSAGE_TYPE_GENERAL_SMS = "-3000"
+# ... simulation monitoring.
+MESSAGE_TYPE_SMON_0000 = "0000"
+MESSAGE_TYPE_SMON_0100 = "0100"
+MESSAGE_TYPE_SMON_1000 = "1000"
+MESSAGE_TYPE_SMON_1100 = "1100"
+MESSAGE_TYPE_SMON_2000 = "2000"
+MESSAGE_TYPE_SMON_3000 = "3000"
+MESSAGE_TYPE_SMON_7000 = "7000"
+MESSAGE_TYPE_SMON_8888 = "8888"
+MESSAGE_TYPE_SMON_9000 = "9000"
+MESSAGE_TYPE_SMON_9999 = "9999"
+
+# All types.
+MESSAGE_TYPES = set([
+    MESSAGE_TYPE_GENERAL_API,
+    MESSAGE_TYPE_GENERAL_SMS,
+    MESSAGE_TYPE_GENERAL_SMTP,
+    MESSAGE_TYPE_SMON_0000,
+    MESSAGE_TYPE_SMON_0100,
+    MESSAGE_TYPE_SMON_1000,
+    MESSAGE_TYPE_SMON_1100,
+    MESSAGE_TYPE_SMON_2000,
+    MESSAGE_TYPE_SMON_3000,
+    MESSAGE_TYPE_SMON_7000,
+    MESSAGE_TYPE_SMON_8888,
+    MESSAGE_TYPE_SMON_9000,
+    MESSAGE_TYPE_SMON_9999,
+    ])
+
+
 def _decode_b64(data):
     """Helper function: decodes base64 encoded text."""
     try:
@@ -45,7 +80,27 @@ def _unpack_messages(content):
     return as_b64, as_b64_valid, as_b64_invalid, as_json, as_json_valid, as_json_invalid
 
 
-def _write_stats(stats, fid, fpath, content, attachment):
+def _write_stats_1(stats, sim):
+    """Writes stats."""
+    counts = {}
+    msg_type_stats = {mtype: 0 for mtype in MESSAGE_TYPES if mtype[0] != "-"}
+    for fid, fpath, content, attachment in sim:
+        for msg in content[4]:
+            if msg['simuid'] not in counts:
+                counts[msg['simuid']] = \
+                    {mtype: 0 for mtype in MESSAGE_TYPES if mtype[0] != "-"}
+            counts[msg['simuid']][msg['msgCode']] += 1
+
+    for simuid in sorted(counts.keys()):
+        stats.write("--------------------------------------------------------------------------------------\n")
+        stats.write("Simulation: {0}\n".format(simuid))
+        stats.write("--------------------------------------------------------------------------------------\n")
+        for mtype in sorted(counts[simuid].keys()):
+            stats.write("{0}\t\t{1}\n".format(mtype, counts[simuid][mtype]))
+        stats.write("\n")
+
+
+def _write_stats_2(stats, fid, fpath, content, attachment):
     """Writes email file stats."""
     stats.write("--------------------------------------------------------------------------------------\n")
     stats.write("{0}\n".format(fpath))
@@ -62,10 +117,11 @@ def _write_stats(stats, fid, fpath, content, attachment):
 def _write_trace(trace, fid, messages):
     """Writes email file trace."""
     for msg in messages:
-        trace.write("{0},'{1}',{2},{3}\n".format(fid,
+        trace.write("{0},'{1}',{2},{3},{4}\n".format(fid,
                                                msg['msgCode'],
                                                msg['msgUID'],
-                                               msg['msgTimestamp']))
+                                               msg['msgTimestamp'],
+                                               msg['simuid']))
 
 
 # Set sim id.
@@ -78,7 +134,8 @@ if not os.path.exists(sim_dir):
     raise IOError("Simulation folder does not exist")
 sim_emails = glob.glob(os.path.join(sim_dir, "*.eml"))
 sim_trace = os.path.join(sim_dir, "simulation-{0}-trace.txt".format(sim_id))
-sim_stats = os.path.join(sim_dir, "simulation-{0}-stats.txt".format(sim_id))
+sim_stats_1 = os.path.join(sim_dir, "simulation-{0}-stats-1.txt".format(sim_id))
+sim_stats_2 = os.path.join(sim_dir, "simulation-{0}-stats-2.txt".format(sim_id))
 
 # Unpack emails.
 sim = []
@@ -89,12 +146,19 @@ for fid, fpath in enumerate(sim_emails):
 
 # Write trace.
 with open(sim_trace, 'w') as trace:
-    trace.write("emailFileID,msgCode,msgUID,msgTimestamp\n")
+    trace.write("emailFileID, msgCode, msgUID, msgTimestamp, simuid\n")
     for fid, fpath, content, attachment in sim:
         # _log_stats(fid, fpath, content, attachment)
         _write_trace(trace, fid, content[4])
 
-# Write stats.
-with open(sim_stats, 'w') as stats:
+# Write stats 1.
+with open(sim_stats_1, 'w') as stats:
+    _write_stats_1(stats, sim)
+
+# Write stats (by file).
+with open(sim_stats_2, 'w') as stats:
     for fid, fpath, content, attachment in sim:
-        _write_stats(stats, fid, fpath, content, attachment)
+        _write_stats_2(stats, fid, fpath, content, attachment)
+
+
+
