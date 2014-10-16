@@ -95,9 +95,13 @@ def _write_stats_1(stats, sim):
         stats.write("--------------------------------------------------------------------------------------\n")
         stats.write("Simulation: {0}\n".format(simuid))
         stats.write("--------------------------------------------------------------------------------------\n")
+        total = 0
         for mtype in sorted(counts[simuid].keys()):
             stats.write("{0}\t\t{1}\n".format(mtype, counts[simuid][mtype]))
+            total += counts[simuid][mtype]
         stats.write("\n")
+        stats.write("Total = {0}\n".format(total))
+
 
 
 def _write_stats_2(stats, fid, fpath, content, attachment):
