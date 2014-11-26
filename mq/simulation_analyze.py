@@ -121,8 +121,13 @@ def _write_stats_2(stats, fid, fpath, content, attachment):
 def _write_trace(trace, fid, messages):
     """Writes email file trace."""
     for msg in messages:
-        trace.write("{0}, '{1}', {2}, {3}, {4}\n".format(
-            fid, msg['msgCode'], msg['msgUID'], msg['msgTimestamp'], msg['simuid']))
+        try:
+            jobuid = msg['jobuid']
+        except KeyError:
+            print msg
+            jobuid = ''
+        trace.write("{0}, '{1}', {2}, {3}, {4}, {5}\n".format(
+            fid, msg['msgCode'], msg['msgUID'], msg['msgTimestamp'], msg['simuid'], jobuid))
 
 
 # Set sim id.
@@ -134,9 +139,9 @@ sim_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), sim_dir)
 if not os.path.exists(sim_dir):
     raise IOError("Simulation folder does not exist")
 sim_emails = glob.glob(os.path.join(sim_dir, "*.eml"))
-sim_trace = os.path.join(sim_dir, "simulation-{0}-trace.txt".format(sim_id))
-sim_stats_1 = os.path.join(sim_dir, "simulation-{0}-stats-1.txt".format(sim_id))
-sim_stats_2 = os.path.join(sim_dir, "simulation-{0}-stats-2.txt".format(sim_id))
+sim_trace = os.path.join(sim_dir, "trace.txt")
+sim_stats_1 = os.path.join(sim_dir, "stats-1.txt")
+sim_stats_2 = os.path.join(sim_dir, "stats-2.txt")
 
 # Unpack emails.
 sim = []
@@ -147,9 +152,8 @@ for fid, fpath in enumerate(sim_emails):
 
 # Write trace.
 with open(sim_trace, 'w') as trace:
-    trace.write("emailFileID, msgCode, msgUID, msgTimestamp, simuid\n")
+    trace.write("emailFileID, msgCode, msgUID, msgTimestamp, simuid, jobuid\n")
     for fid, fpath, content, attachment in sim:
-        # _log_stats(fid, fpath, content, attachment)
         _write_trace(trace, fid, content[4])
 
 # Write stats 1.
