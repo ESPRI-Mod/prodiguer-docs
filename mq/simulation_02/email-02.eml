@@ -1,0 +1,69 @@
+Return-Path: no-reply.tgcc@cea.fr
+Received: from courriel3.ipsl.jussieu.fr (LHLO courriel3.ipsl.jussieu.fr)
+ (134.157.176.43) by courriel3.ipsl.jussieu.fr with LMTP; Mon, 3 Nov 2014
+ 21:53:11 +0100 (CET)
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by courriel3.ipsl.jussieu.fr (Postfix) with ESMTP id 39FE11022C1C7
+	for <superviseur@ipsl.jussieu.fr>; Mon,  3 Nov 2014 21:53:11 +0100 (CET)
+X-Virus-Scanned: amavisd-new at courriel3.ipsl.jussieu.fr
+X-Spam-Flag: NO
+X-Spam-Score: -0.086
+X-Spam-Level: 
+X-Spam-Status: No, score=-0.086 tagged_above=-10 required=6.6
+	tests=[BAYES_00=-1.9, RCVD_IN_DNSWL_LOW=-0.7, SUBJ_ALL_CAPS=1.506,
+	TVD_SPACE_RATIO=0.001, TVD_SPACE_RATIO_MINFP=0.999,
+	UPPERCASE_50_75=0.008] autolearn=no
+Received: from courriel3.ipsl.jussieu.fr ([127.0.0.1])
+	by localhost (courriel3.ipsl.jussieu.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id xwFZFaHwbbsk for <superviseur@ipsl.jussieu.fr>;
+	Mon,  3 Nov 2014 21:53:04 +0100 (CET)
+Received: from courriel.ipsl.jussieu.fr (courriel.ipsl.jussieu.fr [134.157.176.41])
+	by courriel3.ipsl.jussieu.fr (Postfix) with ESMTPS id E6BDB1022C1C5
+	for <superviseur@ipsl.jussieu.fr>; Mon,  3 Nov 2014 21:53:04 +0100 (CET)
+MailScanner-NULL-Check: 1415652779.05164@QBUlf4HPN8/wKsDMDWM2lw
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by courriel.ipsl.jussieu.fr (8.13.1/8.13.1) with ESMTP id sA3KquBw002182
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <superviseur@ipsl.jussieu.fr>; Mon, 3 Nov 2014 21:52:56 +0100
+Received: from sainfoin-out.extra.cea.fr (sainfoin-out.extra.cea.fr [132.167.192.145])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id sA3Kq3Ln024817
+          for <superviseur@ipsl.jussieu.fr>; Mon, 3 Nov 2014 21:52:21 +0100 (CET)
+X-Ids: 168
+Received: from epeire1.extra.cea.fr (epeire1.extra.cea.fr [132.167.198.31])
+	by sainfoin.extra.cea.fr (8.14.2/8.14.2/CEAnet-Internet-out-2.3) with ESMTP id sA3Kq21q019409
+	for <superviseur@ipsl.jussieu.fr>; Mon, 3 Nov 2014 21:52:02 +0100
+Received: from epeire1.extra.cea.fr (localhost [127.0.0.1])
+	by localhost (Postfix) with SMTP id 4B1DB8072B
+	for <superviseur@ipsl.jussieu.fr>; Mon,  3 Nov 2014 21:52:02 +0100 (CET)
+Received: from orpin2.extra.cea.fr (orpin2.extra.cea.fr [132.167.198.5])
+	by epeire1.extra.cea.fr (Postfix) with ESMTP id 3BCE380705
+	for <superviseur@ipsl.jussieu.fr>; Mon,  3 Nov 2014 21:52:02 +0100 (CET)
+Received: from van.servext.ccc.cea.fr (van.ccc.cea.fr [132.167.131.22])
+	by orpin2.extra.cea.fr (8.13.8/8.13.8/CEAnet-Intranet-out-1.2) with SMTP id sA3Kq2wi012453
+	for <superviseur@ipsl.jussieu.fr>; Mon, 3 Nov 2014 21:52:02 +0100
+Received: (qmail 19233 invoked from network); 3 Nov 2014 20:52:02 -0000
+Date: Mon, 03 Nov 2014 21:52:01 +0100
+To: superviseur@ipsl.jussieu.fr
+Subject: [TEMPORARY AMQP CHANNEL]
+User-Agent: Heirloom mailx 12.4 7/29/08
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20141103205201.DEA9F1C09F8@curie5134.c-curie.tgcc.ccc.cea.fr>
+From: no-reply.tgcc@cea.fr (Olivier MARTI)
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 5457EAF3.001 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 5457EAF3.001 from sainfoin-out.extra.cea.fr/sainfoin-out.extra.cea.fr/132.167.192.145/sainfoin-out.extra.cea.fr/<no-reply.tgcc@cea.fr>
+X-Scores-Stats: 5457EAF3.001 B=0.50000 L=0.49620 G=0.49620 Disagree Winner=PH
+X-Label-Query: YES
+X-j-chkmail-Score: MSGID : 5457EAF3.001 on shiva.jussieu.fr : j-chkmail score : XXX : R=. U=. O=# B=0.496 -> S=0.546
+X-j-chkmail-Status: Unsure
+X-IPSL-MailScanner: Found to be clean
+X-IPSL-SpamCheck: not spam, SpamAssassin (not cached, score=1.766,
+	required 5, BAYES_00 -2.60, SHIVA_J_CHKMAIL_3 3.00,
+	SUBJ_ALL_CAPS 1.00, UPPERCASE_50_75 0.37)
+X-IPSL-SpamScore: s
+X-IPSL-From: no-reply.tgcc@cea.fr
+
+eyJtc2dBcHBsaWNhdGlvbiI6Im1vbml0b3JpbmciLCJtc2dQcm9kdWNlciI6ImxpYmlnY20iLCJjdW11bFBlcmlvZCI6IiIsInNpbXVpZCI6ImIzZDY0YzBlLTNiMmEtNGJmMS04YTdmLTI3NmU5OWU0NTg5NiIsImpvYnVpZCI6ImM0NTE2NjY3LWI0MDktNGVmMi04ODVhLTU3YzA1OTRkMjcyOCIsIm1zZ0NvZGUiOiIxMDAwIiwibXNnVUlEIjoiYTlhZGY5NWMtNTJmYi00Zjk4LTkwYzMtNTQzOTAyYjBlMzkwIiwibXNnVGltZXN0YW1wIjoiMjAxNC0xMS0wM1QyMTo1MjowMS44MzMyNDc5NDMrMDEwMCJ9Cg==
+eyJtc2dBcHBsaWNhdGlvbiI6Im1vbml0b3JpbmciLCJtc2dQcm9kdWNlciI6ImxpYmlnY20iLCJjdW11bFBlcmlvZCI6IiIsInNpbXVpZCI6ImIzZDY0YzBlLTNiMmEtNGJmMS04YTdmLTI3NmU5OWU0NTg5NiIsImpvYnVpZCI6ImM0NTE2NjY3LWI0MDktNGVmMi04ODVhLTU3YzA1OTRkMjcyOCIsIm1zZ0NvZGUiOiIzMDAwIiwibXNnVUlEIjoiNmZkMzBkOGUtNGI0OC00ZDZkLWEzZDAtNjc2OTlmNWEwYzNhIiwibmVzdGluZyI6IjAiLCJjb21tYW5kIjoiSUdDTV9kZWJ1Z19BY3RpdmF0ZUJpZ0JybyIsIm1zZ1RpbWVzdGFtcCI6IjIwMTQtMTEtMDNUMjE6NTI6MDEuODUwMzU2NzA2KzAxMDAifQo=
+
