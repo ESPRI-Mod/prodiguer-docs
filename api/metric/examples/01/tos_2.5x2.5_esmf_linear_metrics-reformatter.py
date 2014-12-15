@@ -3,50 +3,41 @@ import collections, json, os
 
 
 
-# Set path to metrics file.
-_FPATH = os.path.abspath(__file__).replace("-convertor.py", ".json")
+# Set I/O paths.
+_INPUT_FILE = os.path.abspath(__file__).replace("-reformatter.py", ".json")
+_OUTPUT_FILENAME, _OUTPUT_FILEEXT = os.path.splitext(_INPUT_FILE)
+_OUTPUT_FILE = "{0}-reformatted{1}".format(_OUTPUT_FILENAME, _OUTPUT_FILEEXT)
 
-# Load input file.
-with open(_FPATH, 'r') as ifile:
-    data = ifile.read()
 
-# Replace NaN with "nan" as this is against JSON spec and fails jquery parsing.
-data = data.replace("NaN", '"nan"')
+# Load input data.
+with open(_INPUT_FILE, 'r') as ifile:
+    input_data = ifile.read()
+input_data = input_data.replace("NaN", '"nan"')
+input_data = json.loads(input_data,
+                        object_pairs_hook=collections.OrderedDict)
 
-# Set input metrics.
-metrics_in = json.loads(data, object_pairs_hook=collections.OrderedDict)
-
-# Set group.
-group = "tos_2-5x2-5_esmf_linear_metrics"
-
-# Set fields.
-fields = []
-fields += metrics_in["GFDL-ESM2G"]["SimulationDescription"].keys()
-fields += ["realm", "source", "RegionalMasking"]
-fields += metrics_in["GFDL-ESM2G"]["defaultReference"]["r1i1p1"]["global"].keys()
-
-# Set lines.
-lines = []
-for realm, metrics in metrics_in["GFDL-ESM2G"]["defaultReference"]["r1i1p1"].iteritems():
-    line = []
-    line += metrics_in["GFDL-ESM2G"]["SimulationDescription"].values()
-    line.append(realm)
-    line.append(metrics_in["GFDL-ESM2G"]["defaultReference"]["source"])
-    line.append(metrics_in["RegionalMasking"][realm])
-    line += metrics_in["GFDL-ESM2G"]["defaultReference"]["r1i1p1"][realm].values()
-    lines.append(line)
-
-# Set output metrics.
-metrics_out = {
-    "group": group,
-    "columns": fields,
-    "metrics": lines
+# Initialize output data.
+output_data = {
+    "group": "tos_2-5x2-5_esmf_linear_metrics",
+    "columns": [],
+    "metrics": []
 }
 
-# Set output filename.
-fname, fext = os.path.splitext(_FPATH)
-ofpath = "{0}-converted{1}".format(fname, fext)
+# Set columns.
+output_data["columns"] += input_data["GFDL-ESM2G"]["SimulationDescription"].keys()
+output_data["columns"] += ["realm", "source", "RegionalMasking"]
+output_data["columns"] += input_data["GFDL-ESM2G"]["defaultReference"]["r1i1p1"]["global"].keys()
+
+# Set metrics.
+for realm, metrics in input_data["GFDL-ESM2G"]["defaultReference"]["r1i1p1"].iteritems():
+    metric = []
+    metric += input_data["GFDL-ESM2G"]["SimulationDescription"].values()
+    metric.append(realm)
+    metric.append(input_data["GFDL-ESM2G"]["defaultReference"]["source"])
+    metric.append(input_data["RegionalMasking"][realm])
+    metric += input_data["GFDL-ESM2G"]["defaultReference"]["r1i1p1"][realm].values()
+    output_data["metrics"].append(metric)
 
 # Write output.
-with open(ofpath, 'w') as ofile:
-    ofile.write(json.dumps(metrics_out))
+with open(_OUTPUT_FILE, 'w') as output_file:
+    output_file.write(json.dumps(output_data))
