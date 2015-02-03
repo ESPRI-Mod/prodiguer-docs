@@ -1,2 +1,0 @@
-emailFileID, msgCode, msgUID, msgTimestamp, simuid, jobuid
-1, '0000', e6c3de6e-7dd6-4015-9bee-138c9a88ca88, 2014-11-24T16:56:08.177151402+0100, be870509-b5ba-456d-8d9f-a3e17fa3e389, 6a945c21-ba69-453e-a7a5-112f8afe4928

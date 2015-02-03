@@ -1,9 +1,0 @@
---------------------------------------------------------------------------------------
-/Users/macg/dev/prodiguer/repos/prodiguer-docs/mq/simulation_03/email-01.eml
-FILE 1: BASE64 TOTAL: 1
-FILE 1: BASE64 VALID: 1
-FILE 1: BASE64 INVALID: 0
-FILE 1: JSON TOTAL: 1
-FILE 1: JSON VALID: 1
-FILE 1: JSON INVALID: 0
-FILE 1: ATTACHMENT: 5576
