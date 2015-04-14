@@ -1,0 +1,68 @@
+Return-Path: no-reply.tgcc@cea.fr
+Received: from courriel3.ipsl.jussieu.fr (LHLO courriel3.ipsl.jussieu.fr)
+ (134.157.176.43) by courriel3.ipsl.jussieu.fr with LMTP; Wed, 18 Mar 2015
+ 09:58:45 +0100 (CET)
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by courriel3.ipsl.jussieu.fr (Postfix) with ESMTP id D8283128AB585
+	for <superviseur@ipsl.jussieu.fr>; Wed, 18 Mar 2015 09:51:21 +0100 (CET)
+X-Virus-Scanned: amavisd-new at courriel3.ipsl.jussieu.fr
+X-Spam-Flag: NO
+X-Spam-Score: 2.605
+X-Spam-Level: **
+X-Spam-Status: No, score=2.605 tagged_above=-10 required=6.6
+	tests=[BAYES_00=-1.9, DNS_FROM_AHBL_RHSBL=2.699,
+	RCVD_IN_DNSWL_LOW=-0.7, SUBJ_ALL_CAPS=1.506, TVD_SPACE_RATIO=0.001,
+	TVD_SPACE_RATIO_MINFP=0.999] autolearn=no
+Received: from courriel3.ipsl.jussieu.fr ([127.0.0.1])
+	by localhost (courriel3.ipsl.jussieu.fr [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 6Y1tTvt7Fkyi for <superviseur@ipsl.jussieu.fr>;
+	Wed, 18 Mar 2015 09:51:15 +0100 (CET)
+Received: from courriel.ipsl.jussieu.fr (courriel.ipsl.jussieu.fr [134.157.176.41])
+	by courriel3.ipsl.jussieu.fr (Postfix) with ESMTPS id 43273128AB584
+	for <superviseur@ipsl.jussieu.fr>; Wed, 18 Mar 2015 09:51:15 +0100 (CET)
+MailScanner-NULL-Check: 1427273459.39345@TxCHtBucXIOUMkpNpnmQbA
+Received: from shiva.jussieu.fr (shiva.jussieu.fr [134.157.0.129])
+	by courriel.ipsl.jussieu.fr (8.13.1/8.13.1) with ESMTP id t2I8ouo8014734
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <superviseur@ipsl.jussieu.fr>; Wed, 18 Mar 2015 09:50:56 +0100
+Received: from cirse-out.extra.cea.fr (cirse-out.extra.cea.fr [132.167.192.142])
+          by shiva.jussieu.fr (8.14.4/jtpda-5.4) with ESMTP id t2I8n0u1010222
+          for <superviseur@ipsl.jussieu.fr>; Wed, 18 Mar 2015 09:49:44 +0100 (CET)
+X-Ids: 165
+Received: from epeire1.extra.cea.fr (epeire1.extra.cea.fr [132.167.198.31])
+	by cirse.extra.cea.fr (8.14.2/8.14.2/CEAnet-Internet-out-2.3) with ESMTP id t2I8mxdC024825
+	for <superviseur@ipsl.jussieu.fr>; Wed, 18 Mar 2015 09:48:59 +0100
+Received: from epeire1.extra.cea.fr (localhost [127.0.0.1])
+	by localhost (Postfix) with SMTP id 72D905D8BB6
+	for <superviseur@ipsl.jussieu.fr>; Wed, 18 Mar 2015 09:48:59 +0100 (CET)
+Received: from orpin2.extra.cea.fr (orpin2.extra.cea.fr [132.167.198.5])
+	by epeire1.extra.cea.fr (Postfix) with ESMTP id 6009E5D8BC1
+	for <superviseur@ipsl.jussieu.fr>; Wed, 18 Mar 2015 09:48:59 +0100 (CET)
+Received: from van.servext.ccc.cea.fr (van.ccc.cea.fr [132.167.131.22])
+	by orpin2.extra.cea.fr (8.13.8/8.13.8/CEAnet-Intranet-out-1.2) with SMTP id t2I8mx0C027495
+	for <superviseur@ipsl.jussieu.fr>; Wed, 18 Mar 2015 09:48:59 +0100
+Received: (qmail 31539 invoked from network); 18 Mar 2015 08:48:59 -0000
+Date: Wed, 18 Mar 2015 09:48:59 +0100
+To: superviseur@ipsl.jussieu.fr
+Subject: [TEMPORARY AMQP CHANNEL]
+User-Agent: Heirloom mailx 12.4 7/29/08
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20150318084859.157FA408B0@curie1707.c-curie.tgcc.ccc.cea.fr>
+From: no-reply.tgcc@cea.fr (Laurent Fairhead)
+X-Miltered: at jchkmail2.reseau.jussieu.fr with ID 55093BFC.002 by Joe's j-chkmail (http : // j-chkmail dot ensmp dot fr)!
+X-j-chkmail-Enveloppe: 55093BFC.002 from cirse-out.extra.cea.fr/cirse-out.extra.cea.fr/132.167.192.142/cirse-out.extra.cea.fr/<no-reply.tgcc@cea.fr>
+X-Scores-Stats: 55093BFC.002 B=0.50000 L=0.47952 G=0.47952 Disagree Winner=PH
+X-Label-Query: YES
+X-j-chkmail-Score: MSGID : 55093BFC.002 on shiva.jussieu.fr : j-chkmail score : XXX : R=. U=. O=# B=0.480 -> S=0.529
+X-j-chkmail-Status: Unsure
+X-IPSL-MailScanner: Found to be clean
+X-IPSL-SpamCheck: not spam, SpamAssassin (not cached, score=1.398,
+	required 5, BAYES_00 -2.60, SHIVA_J_CHKMAIL_3 3.00,
+	SUBJ_ALL_CAPS 1.00)
+X-IPSL-SpamScore: s
+X-IPSL-From: no-reply.tgcc@cea.fr
+
+eyJtc2dBcHBsaWNhdGlvbiI6Im1vbml0b3JpbmciLCJtc2dQcm9kdWNlciI6ImxpYmlnY20iLCJjdW11bFBlcmlvZCI6IiIsInNpbXVpZCI6IjcxMTA1NjQ5LTE3ZTgtNDkxYS04ZjhmLTRlZTI2YTIyNTI0ZCIsImpvYnVpZCI6IjMxOTVjNGMxLTIyNzgtNGZkMy05Yzk3LTE5MDkxYTI2ZTNiNiIsIm1zZ0NvZGUiOiI5MDAwIiwibXNnVUlEIjoiNWU2YWJjOTEtMWZjYi00YzQ5LWE1ZDYtMWRjNWFkMmVmZGZmIiwibmVzdGluZyI6IjAiLCJjb21tYW5kIjoiSUdDTV9zeXNfU2VuZE1haWwiLCJtc2dUaW1lc3RhbXAiOiIyMDE1LTAzLTE4VDA5OjQ4OjU5LjAzMDc4NTY0NCswMTAwIn0K
+

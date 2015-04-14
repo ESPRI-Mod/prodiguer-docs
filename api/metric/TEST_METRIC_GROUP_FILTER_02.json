@@ -1,8 +1,0 @@
-{
-	"Institute": {
-		"$in": [
-			"BCCR",
-			"IPSL"
-		]
-	}
-}
