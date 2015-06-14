@@ -35,7 +35,7 @@ To display prodiguer command help text:
 
 This will setup your machine for development.  It will take at least 30 minutes to run and performs the following tasks:
 
-1.	Install common system dependencies;
+1.	Installs common system dependencies;
 
 2.	Installs [PostgreSQL](http://www.postgresql.org) and [MongoDB](https://www.mongodb.org) database servers.  
 
