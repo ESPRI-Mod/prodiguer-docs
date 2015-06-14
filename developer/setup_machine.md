@@ -10,9 +10,11 @@ CentOS:  <pre><code>yum install git</pre></code>
 
 ## Step 2: Install prodiguer shell
 
-git clone https://github.com/Prodiguer/prodiguer-shell.git /opt/prodiguer
-echo 'export PRODIGUER_HOME=/opt/prodiguer' >> ~/.bash_profile
-source ~/.bash_profile
+<pre><code>
+git clone https://github.com/Prodiguer/prodiguer-shell.git /opt/prodiguer  
+echo 'export PRODIGUER_HOME=/opt/prodiguer' >> ~/.bash_profile  
+source ~/.bash_profile  
+</pre></code>
 
 Note that your prodiguer home directory = /opt/prodiguer
 
