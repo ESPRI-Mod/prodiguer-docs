@@ -17,8 +17,10 @@ source ~/.bash_profile
 
 ## Step 3: Activate prodiguer commands  
 
-echo 'source /opt/prodiguer/aliases.sh' >> ~/.bash_profile
-source ~/.bash_profile
+<pre><code>
+echo 'source /opt/prodiguer/aliases.sh' >> ~/.bash_profile  
+source ~/.bash_profile  
+</pre></code>
 
 Note 1: Type prodiguer- followed by TAB will display set of supported commands
 
