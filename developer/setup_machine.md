@@ -6,7 +6,7 @@ Prodiguer is a highly distributed messaging platform upon which are built severa
 
 ## Step 1: Install git
 
-CentOS:  <pre><code>yum install git</pre></code>  
+**CentOS:**  <pre><code>yum install git</pre></code>  
 
 ## Step 2: Install prodiguer shell
 
@@ -27,7 +27,7 @@ Note 2: Type help-prodiguer- followed by TAB will display supported command help
 
 ## Step 4: Run OS setup command.
 
-CentOS:  <pre><code>prodiguer-os-setup centos dev</pre></code>  
+**CentOS:**  <pre><code>prodiguer-os-setup centos dev</pre></code>  
 
 This will setup your machine for development.  It will take at least 30 minutes to run and performs the following tasks:
 
