@@ -6,8 +6,7 @@ Prodiguer is a highly distributed messaging platform upon which are built severa
 
 ## Step 1: Install git
 
-CentOS:  
-<pre><code>yum install git</pre></code>
+CentOS:  <pre><code>yum install git</pre></code>  
 
 ## Step 2: Install prodiguer shell
 
