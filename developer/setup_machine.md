@@ -17,8 +17,7 @@ source ~/.bash_profile
 
 ## Step 3: Activate prodiguer commands  
 
-<pre><code>
-echo 'source /opt/prodiguer/aliases.sh' >> ~/.bash_profile  
+<pre><code>echo 'source /opt/prodiguer/aliases.sh' >> ~/.bash_profile  
 source ~/.bash_profile  
 </pre></code>
 
@@ -28,7 +27,7 @@ Note 2: Type help-prodiguer- followed by TAB will display supported command help
 
 ## Step 4: Run OS setup command.
 
-CentOS: prodiguer-os-setup centos dev  
+CentOS:  <pre><code>prodiguer-os-setup centos dev</pre></code>  
 
 This will setup your machine for development.  It will take at least 30 minutes to run and performs the following tasks:
 
