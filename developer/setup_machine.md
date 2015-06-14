@@ -21,9 +21,13 @@ source ~/.bash_profile
 source ~/.bash_profile  
 </pre></code>
 
-**Note 1:** Type prodiguer- followed by TAB will display set of supported commands
+To display set of supported prodiguer commands:  
 
-**Note 2:** Type help-prodiguer- followed by TAB will display supported command help text
+<pre><code>prodiguer- followed by TAB</pre></code>
+
+To display prodiguer command help text:  
+
+<pre><code>help-prodiguer- followed by TAB</pre></code>
 
 ## Step 4: Run OS setup command.
 
