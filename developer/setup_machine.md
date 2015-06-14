@@ -23,11 +23,11 @@ source ~/.bash_profile
 
 To display set of supported prodiguer commands:  
 
-<pre><code>prodiguer- followed by TAB</pre></code>
+<pre><code>prodiguer-[**TAB-KEY**]</pre></code>
 
 To display prodiguer command help text:  
 
-<pre><code>help-prodiguer- followed by TAB</pre></code>
+<pre><code>help-prodiguer-[**TAB-KEY**]</pre></code>
 
 ## Step 4: Run OS setup command.
 
