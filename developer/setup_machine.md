@@ -4,6 +4,10 @@
 
 Prodiguer is a highly distributed messaging platform upon which are built several applications.  In order to become an active contributor to the platform you will need to setup your machine so that all required dependencies are installed and running.  The required dependencies consist of c libraries, python libraries, 2 database servers, a web server and a message queue server.  Fortunately the machine setup process has been streamlined to allow you to become productive as soon as possible.
 
+## Assumptions
+
+You are running linux OS upon a suitably powerful machine.  
+
 ## Step 1: Install git
 
 **CentOS:**  <pre><code>yum install git</pre></code>  
