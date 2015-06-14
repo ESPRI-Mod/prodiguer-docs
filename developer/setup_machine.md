@@ -2,26 +2,28 @@
 
 ## Overview
 
-Prodiguer is a highly distributed messaging platform upon which are built several applications.  In order to become an active contributor to the platform you will need to setup your machine so that all required dependencies are installed and running.  The required dependencies consist of c libraries, python libraries, 2 database servers, a web server and RabbitMQ server.  Fortunately the machien setup process has been streamlined to allow you to become productive as soon as possible.
+Prodiguer is a highly distributed messaging platform upon which are built several applications.  In order to become an active contributor to the platform you will need to setup your machine so that all required dependencies are installed and running.  The required dependencies consist of c libraries, python libraries, 2 database servers, a web server and a message queue server.  Fortunately the machine setup process has been streamlined to allow you to become productive as soon as possible.
 
-## Step 1 - Install git.
+## Step 1: Install git
 
 CentOS: yum install git
 
-## Step 2: Download prodiguer shell from GitHub
+## Step 2: Install prodiguer shell
 
 git clone https://github.com/Prodiguer/prodiguer-shell.git /opt/prodiguer
+echo 'export PRODIGUER_HOME=/opt/prodiguer' >> ~/.bash_profile
+source ~/.bash_profile
 
 Note that your prodiguer home directory = /opt/prodiguer
 
 ## Step 3: Activate prodiguer commands  
 
-source /opt/prodiguer/aliases.sh
 echo 'source /opt/prodiguer/aliases.sh' >> ~/.bash_profile
+source ~/.bash_profile
 
-Note 1: prodiguer- followed by TAB will display set of supported commands
+Note 1: Type prodiguer- followed by TAB will display set of supported commands
 
-Note 2: help-prodiguer- followed by TAB will display supported command help text
+Note 2: Type help-prodiguer- followed by TAB will display supported command help text
 
 ## Step 4: Run OS setup command.
 
