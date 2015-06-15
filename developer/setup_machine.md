@@ -1,4 +1,4 @@
-# Prodiguer platform developer documentation - Machine Setup
+# Prodiguer Machine Setup
 
 ## Overview
 
@@ -46,6 +46,11 @@ This will setup your machine for development.  It will take at least 30 minutes 
 3.	Installs [RabbitMQ](https://www.rabbitmq.com) message queue server.  
 
 4.	Installs [nginx](http://wiki.nginx.org/Main) web server.
+
+## Step 5: Verify setup.
+
+
+
 
 
 
