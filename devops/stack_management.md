@@ -58,3 +58,5 @@ To update just the virtual environments:
 ## Stack uninstallation  
 
 <pre><code>prodiguer-stack-uninstall</pre></code>
+
+This will remove all trace of the prodiguer stack from your system except for [environment variables](https://github.com/Prodiguer/prodiguer-docs/blob/master/devops/environment_variables.md).  
