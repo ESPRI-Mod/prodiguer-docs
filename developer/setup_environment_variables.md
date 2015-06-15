@@ -9,17 +9,17 @@ The Prodiguer platform is distributed across 3 servers: db, mq & web.  Code runn
 ## Variables  
 
 **PRODIGUER_HOME**  
-Description:	Path to local prodiguer home directory.  
-Default:		/opt/prodiguer  
-Machines:		all  
+* Description:	Path to local prodiguer home directory.  
+* Default:		/opt/prodiguer  
+* Machines:		all  
 
 **PRODIGUER_DB_MONGO_USER_PASSWORD**  
-Description:	Mongo database password for the _prodiguer-db-mongo-user_ account.  
-Machines:		all  
+* Description:	Mongo database password for the _prodiguer-db-mongo-user_ account.  
+* Machines:		all  
 
 **PRODIGUER_DB_PGRES_USER_PASSWORD**  
-Description:	PostgreSQL database password for the _prodiguer_db_user_ account.  
-Machines:		all  
+* Description:	PostgreSQL database password for the _prodiguer_db_user_ account.  
+* Machines:		all  
 
 **PRODIGUER_MQ_RABBIT_LIBIGCM_USER_PASSWORD**  
 Description:	RabbitMQ password for the _libigcm-mq-user_ account.  
