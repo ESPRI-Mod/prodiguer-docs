@@ -7,8 +7,10 @@ The Prodiguer stack is the set of software packages and associated command line 
 Your linux machine has been [setup correctly](https://github.com/Prodiguer/prodiguer-docs/blob/master/devops/machine_setup.md).  
 
 You have installed the prodiguer command shell:  
-<pre><code>git clone https://github.com/Prodiguer/prodiguer-shell.git /opt/prodiguer  
-echo 'source /opt/prodiguer/aliases.sh' >> ~/.bash_profile  
+<pre><code>git clone https://github.com/Prodiguer/prodiguer-shell.git /opt/prodiguer</pre></code>
+
+You have activated the prodiguer commands:  
+<pre><code>echo 'source /opt/prodiguer/aliases.sh' >> ~/.bash_profile  
 source ~/.bash_profile
 </pre></code>
 
