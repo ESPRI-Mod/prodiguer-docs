@@ -1,7 +1,7 @@
 # Prodiguer IDE Setup
 
 This guide streamlines preparing an IDE (Integrated Development Environment) for Prodiguer platform development.  The supported IDE types are: 
-* [sublime-text](http://www.sublimetext.com/);
+* [sublime-text](http://www.sublimetext.com/)
 
 ## Assumptions
 
@@ -9,7 +9,7 @@ You have installed the [prodiguer stack](https://github.com/Prodiguer/prodiguer-
 
 ## Setting up [sublime-text](http://www.sublimetext.com/)  
 
-1.	Create a sublime-text project directory: 
+1.	Create sublime-text project directories: 
 <pre><code>mkdir -p /opt/prodiguer/ops/ide/sublime
 mkdir -p /opt/prodiguer/ops/ide/sublime-locals
 </pre></code>
@@ -18,6 +18,7 @@ mkdir -p /opt/prodiguer/ops/ide/sublime-locals
 <pre><code>ln -s /opt/prodiguer/repos/prodiguer-client /opt/prodiguer/ops/ide/sublime-locals/client
 ln -s /Users/macg/dev/local/prodiguer/cv /opt/prodiguer/ops/ide/sublime-locals/cv
 ln -s /Users/macg/dev/local/prodiguer/docs /opt/prodiguer/ops/ide/sublime-locals/docs
+ln -s /Users/macg/dev/local/prodiguer/docs-devops /opt/prodiguer/ops/ide/sublime-locals/docs-devops
 ln -s /Users/macg/dev/local/prodiguer/fe /opt/prodiguer/ops/ide/sublime-locals/fe
 ln -s /Users/macg/dev/local/prodiguer/fe-monitoring /opt/prodiguer/ops/ide/sublime-locals/fe-monitoring
 ln -s /Users/macg/dev/local/prodiguer/fe-simulation /opt/prodiguer/ops/ide/sublime-locals/fe-simulation
@@ -27,8 +28,12 @@ ln -s /Users/macg/dev/local/prodiguer/shell /opt/prodiguer/ops/ide/sublime-local
 
 3.	Open sublime-text.  
 
-4.  Create prodiguer sublime-text project.
+4.	Open new sublime-text project.  
 
-5.	
+5.	From main menu click: Project -->  Save Project as ...
 
+6.	Save project to: /opt/prodiguer/ops/ide/sublime/prodiguer.sublime-project
 
+7.  From main menu click: Project -->  Add Folder to Project ...
+
+8.	Select folder: /opt/prodiguer/ops/ide/sublime-locals
