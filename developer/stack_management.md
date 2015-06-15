@@ -24,6 +24,10 @@ This will perform the following tasks:
 
 4.	Create various python virtual environments used by the platform.  
 
+## Environment variables  
+
+Once the stack is installed upon your machine you will need to setup the various environment variables relevant to your installation.  These are documented [here](https://github.com/Prodiguer/prodiguer-docs/blob/master/developer/environment_variables.md).
+
 ## Stack commands    
 
 To display set of prodiguer commands:  
