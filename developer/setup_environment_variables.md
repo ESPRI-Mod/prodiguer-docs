@@ -22,21 +22,21 @@ The Prodiguer platform is distributed across 3 servers: db, mq & web.  Code runn
 * Machines:		all  
 
 **PRODIGUER_MQ_RABBIT_LIBIGCM_USER_PASSWORD**  
-Description:	RabbitMQ password for the _libigcm-mq-user_ account.  
-Machines:		mq, dev
+* Description:	RabbitMQ password for the _libigcm-mq-user_ account.  
+* Machines:		mq, dev
 
 **PRODIGUER_MQ_RABBIT_USER_PASSWORD**  
-Description:	RabbitMQ password for the _prodiguer-mq-user_ account.  
-Machines:		mq, dev
+* Description:	RabbitMQ password for the _prodiguer-mq-user_ account.  
+* Machines:		mq, dev
 
 **PRODIGUER_MQ_IMAP_PASSWORD**  
-Description:	IMAP server password for the _superviseur_ account.  
-Machines:		mq, dev
+* Description:	IMAP server password for the _superviseur_ account.  
+* Machines:		mq, dev
 
 **PRODIGUER_MQ_SMTP_PASSWORD**  
-Description:	SMTP server password for the _superviseur_ account.  
-Machines:		mq, dev
+* Description:	SMTP server password for the _superviseur_ account.  
+* Machines:		mq, dev
 
 **PRODIGUER_WEB_API_COOKIE_SECRET**  
-Description:	Secret cookie key associated with valid web service requests.  
-Machines:		web, dev
+* Description:	Secret cookie key associated with valid web service requests.  
+* Machines:		web, dev  
