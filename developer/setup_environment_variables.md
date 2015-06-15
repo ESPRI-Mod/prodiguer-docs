@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Prodiguer platform is distributed across 3 servers: db, mq & web.  Code running upon each server requires access to sensitive information such as passwords.  All such information is stored in environment variables details of which are listed below.  
+The Prodiguer platform is distributed across 3 servers: db, mq & web.  Code running upon each server requires access to sensitive information such as passwords & server addresses.  All such information is stored in environment variables details of which are listed below.  
 
 **Note** The list of supported machine types are: db, mq, web & dev.  Some variables are required across all machines.
 
