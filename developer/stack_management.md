@@ -1,6 +1,6 @@
 # Prodiguer Stack Management
 
-The Prodiguer stack is the set of software packages and associated command line interface that has been developed by IPSL staff.  It is installed using git and then maintained using the prodiguer-stack-XXXXX commands from the command line. 
+The Prodiguer stack is the set of software packages and associated command line interface that has been developed by IPSL staff.  It is installed using git and then maintained from the command line. 
 
 ## Assumptions
 
