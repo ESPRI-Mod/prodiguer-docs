@@ -4,7 +4,7 @@ The Prodiguer stack is the set of software packages and associated command line 
 
 ## Assumptions
 
-Your linux machine has been [setup correctly](https://github.com/Prodiguer/prodiguer-docs/blob/master/developer/setup_machine.md).  
+Your linux machine has been [setup correctly](https://github.com/Prodiguer/prodiguer-docs/blob/master/devops/machine_setup.md).  
 
 You have installed the prodiguer command shell:  
 <pre><code>git clone https://github.com/Prodiguer/prodiguer-shell.git /opt/prodiguer  
@@ -28,7 +28,7 @@ This will perform the following tasks:
 
 ## Environment variables  
 
-Once the stack is installed upon your machine you will need to setup the various environment variables relevant to your installation.  These are documented [here](https://github.com/Prodiguer/prodiguer-docs/blob/master/developer/environment_variables.md).
+Once the stack is installed upon your machine you will need to setup the various environment variables relevant to your installation.  These are documented [here](https://github.com/Prodiguer/prodiguer-docs/blob/master/devops/environment_variables.md).
 
 ## Stack commands    
 

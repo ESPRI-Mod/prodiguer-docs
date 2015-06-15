@@ -12,7 +12,7 @@ The setup process takes upto 30 minutes and installs some or all of the followin
 
 4.	[nginx](http://wiki.nginx.org/Main) web server.  
 
-Once the process has ran you can proceed to [install the prodiguer stack](https://github.com/Prodiguer/prodiguer-docs/blob/master/developer/stack_management.md).  
+Once the process has ran you can proceed to [install the prodiguer stack](https://github.com/Prodiguer/prodiguer-docs/blob/master/devops/stack_management.md).  
 
 ## Supported Machine types  
 
