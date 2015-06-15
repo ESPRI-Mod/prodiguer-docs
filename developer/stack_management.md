@@ -4,15 +4,16 @@ The Prodiguer stack is the set of software packages and associated command line 
 
 ## Assumptions
 
-You are running linux OS upon a suitably powerful machine.  The machine has been [setup correctly](https://github.com/Prodiguer/prodiguer-docs/blob/master/developer/setup_machine.md).
+Your linux machine has been [setup correctly](https://github.com/Prodiguer/prodiguer-docs/blob/master/developer/setup_machine.md).  
+
+You have installed the prodiguer command shell:  
+<pre><code>git clone https://github.com/Prodiguer/prodiguer-shell.git /opt/prodiguer</pre></echo 'source /opt/prodiguer/aliases.sh' >> ~/.bash_profile  
+source ~/.bash_profile  
+code>
 
 ## Stack installation  
 
-<pre><code>git clone https://github.com/Prodiguer/prodiguer-shell.git /opt/prodiguer  
-echo 'source /opt/prodiguer/aliases.sh' >> ~/.bash_profile  
-source ~/.bash_profile  
-prodiguer-stack-install
-</pre></code>
+<pre><code>prodiguer-stack-install</pre></code>
 
 This will perform the following tasks:  
 

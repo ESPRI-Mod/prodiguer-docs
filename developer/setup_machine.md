@@ -28,8 +28,6 @@ web = web server
 
 centos = CentOS 6.5+
 
-debian = Debian
-
 ## Assumptions
 
 You are running linux OS upon a suitably powerful machine.  
