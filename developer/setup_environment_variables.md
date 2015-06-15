@@ -54,7 +54,7 @@ The Prodiguer platform is distributed across 3 servers: db, mq & web.  Code runn
 
 **PRODIGUER_WEB_HOST**  
 * Description:	Web server hostname & port.  
-* Machines:		mq, dev  
+* Machines:		web, dev  
 * Default:		localhost:8888  
 
 **PRODIGUER_WEB_API_COOKIE_SECRET**  
