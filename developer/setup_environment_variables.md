@@ -52,11 +52,11 @@ The Prodiguer platform is distributed across 3 servers: db, mq & web.  Code runn
 * Description:	SMTP server password for the _superviseur_ account.  
 * Machines:		mq, dev
 
+**PRODIGUER_WEB_API_COOKIE_SECRET**  
+* Description:	Secret cookie key associated with valid web service requests.  
+* Machines:		web, dev  
+
 **PRODIGUER_WEB_HOST**  
 * Description:	Web server hostname & port.  
 * Machines:		web, dev  
 * Default:		localhost:8888  
-
-**PRODIGUER_WEB_API_COOKIE_SECRET**  
-* Description:	Secret cookie key associated with valid web service requests.  
-* Machines:		web, dev  
