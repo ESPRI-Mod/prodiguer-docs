@@ -1,16 +1,16 @@
 # Prodiguer platform system inputs  
 
-From a security perspective a fundamental system task is the validation of all system inputs prior to acceptance for further processing.  Such validation involves enforcing constraints related to both input encoding and content.  For example validating a JSON encoded text input requires verifying that the text is valid and safe JSON and then verifying that the decoded JSON confirms to validation rules such as "The msgCode field is required". 
+All system inputs must be validated prior to further processing.  Input validation failure may indicate a security event.  Input validation enforces constraints upon both input encoding and content.  System inputs must be validated at both the external & internal system boundaries.  
 
-The defense in depth principle states that system inputs should be validated at both the system's external & internal boundaries.  For example an external system boundary may be a publically available web-service.  Such a web-service may call an database access function exposed by a system sub-component.  Thus input validation needs to occur within the web-service (external system boundary) and in the database access function (internal system boundary).
+An example system input validation scenario is as follows.  A Prodiguer web-service endpoint exposes a POST action that results in POST data being passed to a Prodiguer data access object (DAO) which subsequently updates a database.  The web-service endpoint is an external boundary, whilst the DAO is an internal boundary.  The web-service endpoint handler is responsible for validating the raw POST data, i..e verifying that it is well-formed JSON that confirms to a known schema.  The DAO is responsible for validating the input into the database query that updates the database, i.e. ensuring that each field is of the required type. 
 
-This document details the set of Prodiguer platform system inputs.  
+This document lists the full set of Prodiguer platform external system boundary inputs.  For each type of input a security threat level is defined.  
 
-# Messages published to the MQ platform by libIGCM.  
+# Message Queue (MQ) messages  
 
 libIGCM publishes data to the MQ platform via email.  Each email consists of a subject, a body and optional attachments.  The email subject is simple text.  The email body is base64 encoded JSON text.  The email attachments are either .ini or .json files.  Anyone can send an email to the Prodiguer email server thus this attack vector is wide.  
 
-Messages published to the MQ platform by libIGCM are considered to be a HIGH security threat.  
+MQ messages are considered to be a **HIGH** security threat.  
 
 # Stack configuration files.  
 
