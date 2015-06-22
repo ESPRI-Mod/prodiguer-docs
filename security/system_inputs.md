@@ -1,10 +1,10 @@
 # Prodiguer platform system inputs  
 
-All system inputs must be validated prior to further processing.  Input validation failure may indicate a security event.  Input validation enforces constraints upon both input encoding and content.  System inputs must be validated at both the external & internal system boundaries.  
+System input validation failures can indicate security events.  Inputs vary widely in nature: source code, config files, messages, HTTP requests ...etc.  Validation enforces constraints upon input encoding & content.  Inputs must be validated at both the external & internal system boundaries thereby offering defense in depth.  All system input validation errors must be logged in such a way that sysem operators can be notified of any suspicious errors.  
 
-An example system input validation scenario is as follows.  A Prodiguer web-service endpoint exposes a POST action that results in POST data being passed to a Prodiguer data access object (DAO) which subsequently updates a database.  The web-service endpoint is an external boundary, whilst the DAO is an internal boundary.  The web-service endpoint handler is responsible for validating the raw POST data, i..e verifying that it is well-formed JSON that confirms to a known schema.  The DAO is responsible for validating the input into the database query that updates the database, i.e. ensuring that each field is of the required type. 
+An example system input validation scenario is as follows.  A Prodiguer web-service endpoint exposes a POST action that results in POST data being passed to a Prodiguer data access object (DAO) which subsequently updates a database.  The web-service endpoint is at an external boundary and validate the raw POST data.  The DAO is at an internal boundary validates the paraemters to be passed to the database for updating.
 
-This document lists the full set of Prodiguer platform external system boundary inputs.  For each type of input a security threat level is defined.  
+This document lists the set of Prodiguer platform external system boundary inputs.  For each type of input a security threat level is defined.  
 
 # Message Queue (MQ) messages  
 
@@ -24,7 +24,7 @@ The Prodiguer platform loads several configuration files either at start up or i
 
 * PRODIGUER_HOME/ops/config/web-supervisord.conf  
 
-Stack configuration file tampering is considered to be a MEDIUM security threat.  
+Stack configuration file tampering is considered to be a **MEDIUM** security threat.  
 
 # Stack environment variables  
 
@@ -44,7 +44,7 @@ The Prodiguer platform uses environment variables to store sensitive configurati
 * PRODIGUER_WEB_API_COOKIE_SECRET  
 * PRODIGUER_WEB_HOST  
 
-Stack environment variable tampering is considered to be a MEDIUM security threat.  
+Stack environment variable tampering is considered to be a **MEDIUM** security threat.  
 
 # Stack template files.  
 
@@ -54,7 +54,7 @@ The Prodiguer platform a few template files that are used when updating the stac
 
 * PRODIGUER_HOME/shell/templates/venv/requirement-server.txt  
 
-Stack configuration file tampering is considered to be a MEDIUM security threat.  
+Stack configuration file tampering is considered to be a **MEDIUM** security threat.  
 
 # Service configuration files.  
 
@@ -68,7 +68,7 @@ The Prodiguer platform leverages several 3rd party services each of which loads 
 
 * MongoDB  
 
-Service configuration file tampering is considered to be a MEDIUM security threat.
+Service configuration file tampering is considered to be a **MEDIUM** security threat.
 
 # WEB service endpoints.  
 
@@ -91,13 +91,15 @@ The Prodiguer WEB service exposes a set of HTTP(S) endpoints.  HTTP requests mad
 * /api/1/ops/heartbeat
 * /api/1/ops/list_endpoints
 
-WEB service endpoint tampering is considered to be a HIGH security threat.  
+WEB service endpoint tampering is considered to be a **HIGH** security threat.  
 
 # Controlled vocabularies.  
 
 The Prodiguer platform loads controlled vocabularies (CV's) to validate data flowing the system.  Such validation ensures that an input conforms to a whitelist.  The validation of CV related data is in some cases soft, i.e. new terms are accepted by the system.  
 
-All Prodiguer CV termsets are hosted with the prodiguer-cv GitHub repo.  The prodiguer-git-user account has write permissions to this account.  Therefore GitHub related security best proactises come into scope.
+All Prodiguer CV termsets are hosted with the prodiguer-cv GitHub repo.  The prodiguer-git-user account has write permissions to this account.  Therefore foloowing GitHub related security best practises is essential.
+
+Controlled vocabulary tampering is considered to be a **MEDIUM** security threat.  
 
 # Source code  
 
@@ -109,5 +111,5 @@ Git versioned source residing upon local machines is of course vulnerable to loc
 
 It is self-evident that Prodiguer team members must respect best practises when it comes to managing their GitHub user accounts.  Furthermore Prodiguer servers must monitor file system tampering and shutdown Prodiguer services when such tampering occurs.  
 
-Source code tampering is considered to be a MEDIUM security threat.
+Source code tampering is considered to be a **MEDIUM** security threat.
 
