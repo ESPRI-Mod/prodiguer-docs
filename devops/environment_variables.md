@@ -6,6 +6,11 @@ The Prodiguer platform is distributed across different types of machine.  Code r
 
 ## Variables  
 
+**PRODIGUER_CLIENT_WEB_URL**  
+* Description:	Web service url from prodiguer client.  
+* Machines:		mq, dev  
+* Default:		https://prodiguer-test-web.ipsl.fr  
+
 **PRODIGUER_DB_MONGO_HOST**  
 * Description:	Mongo server hostname & port.  
 * Machines:		all  
@@ -58,3 +63,8 @@ The Prodiguer platform is distributed across different types of machine.  Code r
 * Description:	Web server hostname & port.  
 * Machines:		web, dev  
 * Default:		localhost:8888  
+
+**PRODIGUER_WEB_URL**  
+* Description:	Web service url.  
+* Machines:		mq, dev  
+* Default:		https://prodiguer-test-web.ipsl.fr  
