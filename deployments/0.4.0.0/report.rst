@@ -8,7 +8,7 @@ Deployment to all servers was smooth.  There are currently 2 identified blockers
 Deployment issues
 --------------------------------------
 
-**On the MQ server the daemon logs for both stdout and stderr are being writing to the same log file rather than different log files.**
+**On the MQ server the daemon logs for both stdout and stderr are being writing to the same log file.**
 
 - Deployment Impact: nil
 
@@ -20,13 +20,13 @@ Deployment issues
 
 - Action: NC will rollout update when given green light by MG.
 
-**When executing the command prodiguer-db-pgres-migrate a warning was emitted saying that a new db sequence object had already been created.  This had no effect on the deployment.**
+**When executing the command prodiguer-db-pgres-migrate a warning was emitted saying that a new db sequence object had already been created.**
 
 - Deployment Impact: nil
 
 - Action: MG will update the relevant migrate sql script.
 
-**python is buffering output to the daemon log files.  The -u python flag needs to be applied but only when debugging (e.g. when testing system deployment).**
+**python is buffering output to the MQ daemon log files, the -u python flag needs to be applied but only when debugging (e.g. when testing system deployment).**
 
 - Deployment Impact: nil
 
@@ -43,7 +43,7 @@ Deployment issues
 Deployment Patches
 --------------------------------------
 
-**When running the front-end from NC’s browser the calls to the underlying web-service were being rejected as NC’s browser was appending a cookie to the HTTP request headers.  On the server side HTTP request validation was enforcing the constraint that the HTTP request should not contain any cookies.  A patch was issued to relax this constraint.**
+**When running the front-end from NC’s browser the calls to the underlying web-service were being rejected as NC’s browser was appending a cookie to the HTTP request headers.  A patch was issued to relax the HTTP request cookie validation constraint.**
 
 - Deployment Impact: blocker - resolved with simple patch
 
@@ -59,9 +59,9 @@ Testing issues
 
 - Deployment impact: blocker
 
-- Action: MG will debug front-end to verify that the web-service is returning page setup data correctly.  If the web-service response is OK then MG will debug javascript to see if a web-service parsing issue is causing the issue.  
+- Action: MG will debug front-end to verify that the web-service is returning page setup data correctly.  If the web-service response is OK then MG will debug javascript to see if a web-service parsing issue is causing the issue.  He has not been able to replicate this in dev environment.
 
-**Some job related web-socket events are not being pushed to the browser.  unicode decoding issues are being logged on the web-server and this appears to be causing the event push to be aborted.**
+**Some job related web-socket events are not being pushed to the browser, they are related to unicode decoding issues.**
 
 - Deployment impact: blocker
 
