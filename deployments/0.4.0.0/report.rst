@@ -16,6 +16,8 @@ Deployment issues
 
 **On the prodiguer test server the prodiguer venv python version is 2.7.6.  This should be updated to 2.7.10.**
 
+- Deployment Impact: nil
+
 - Action: MG will verify that prodiguer-stack-update-python command is good to go.
 
 - Action: NC will rollout update when given green light by MG.
