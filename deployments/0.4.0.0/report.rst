@@ -8,25 +8,25 @@ Deployment to all servers was smooth.  There are currently 2 identified blockers
 Deployment issues
 --------------------------------------
 
-1.	On the MQ server the daemon logs for both stdout and stderr are being writing to the same log file rather than different log files.  
+**On the MQ server the daemon logs for both stdout and stderr are being writing to the same log file rather than different log files.**
 
 - Deployment Impact: nil
 
 - Action: MG will update the mq-supervisord.conf template accordingly and then inform NC who will update the server accordingly.
 
-2.	On the prodiguer test server the prodiguer venv python version is 2.7.6.  This should be updated to 2.7.10.
+**On the prodiguer test server the prodiguer venv python version is 2.7.6.  This should be updated to 2.7.10.**
 
 - Action: MG will verify that prodiguer-stack-update-python command is good to go.
 
 - Action: NC will rollout update when given green light by MG.
 
-3.	When executing the command prodiguer-db-pgres-migrate a warning was emitted saying that a new db sequence object had already been created.  This had no effect on the deployment.
+**When executing the command prodiguer-db-pgres-migrate a warning was emitted saying that a new db sequence object had already been created.  This had no effect on the deployment.**
 
 - Deployment Impact: nil
 
 - Action: MG will update the relevant migrate sql script.
 
-4.	python is buffering output to the daemon log files.  The -u python flag needs to be applied but only when debugging (e.g. when testing system deployment).
+**python is buffering output to the daemon log files.  The -u python flag needs to be applied but only when debugging (e.g. when testing system deployment).**
 
 - Deployment Impact: nil
 
@@ -34,7 +34,7 @@ Deployment issues
 
 - Action: NC will restart the daemons using this debugging template and then revert back to the normal template when satisfied.
 
-5.	Automated git pushes from the MQ server to the prodiguer-cv repo have not been functioning since 29/06.  Need to understand why.
+**Automated git pushes from the MQ server to the prodiguer-cv repo have not been functioning since 29/06.  Need to understand why.**
 
 - Deployment Impact: NC had to manually commit
 
@@ -43,7 +43,7 @@ Deployment issues
 Deployment Patches
 --------------------------------------
 
-1.	When running the front-end from NC’s browser the calls to the underlying web-service were being rejected as NC’s browser was appending a cookie to the HTTP request headers.  On the server side HTTP request validation was enforcing the constraint that the HTTP request should not contain any cookies.  A patch was issued to relax this constraint.
+**When running the front-end from NC’s browser the calls to the underlying web-service were being rejected as NC’s browser was appending a cookie to the HTTP request headers.  On the server side HTTP request validation was enforcing the constraint that the HTTP request should not contain any cookies.  A patch was issued to relax this constraint.**
 
 - Deployment Impact: blocker - resolved with simple patch
 
@@ -61,19 +61,19 @@ Testing issues
 
 - Action: MG will debug front-end to verify that the web-service is returning page setup data correctly.  If the web-service response is OK then MG will debug javascript to see if a web-service parsing issue is causing the issue.  
 
-Some job related web-socket events are not being pushed to the browser.  unicode decoding issues are being logged on the web-server and this appears to be causing the event push to be aborted.
+**Some job related web-socket events are not being pushed to the browser.  unicode decoding issues are being logged on the web-server and this appears to be causing the event push to be aborted.**
 
 - Deployment impact: blocker
 
 - Action: MG Will try to replicate issue in his environment.  If replicable he will analyse and issue patch.  If not he will downgrade his python version to 2.7.6 and retest.
 
-The python library ‘requests' is reporting warnings due to urllib3 not performing client certificate validation on HTTPS calls to the prodiguer web service from either the prodiguer-client or the internal-api MQ consumer. 
+**The python library ‘requests' is reporting warnings due to urllib3 not performing client certificate validation on HTTPS calls to the prodiguer web service from either the prodiguer-client or the internal-api MQ consumer.**
 
 - Deployment impact: nil (however logs will contain these warnings)
 
 - Action: MG will explore options for either suppressing (temporarily) this warning or for issuing a patch so that requests does not use urllib3 when performing the certificate negotiation.
 
-Dead emails are still sitting in the AMPQ-PROD mailbox.  The ext-smtp-realtime MQ agent should be placing these emails in the ext-smtp queue.  The ext-smtp MQ agent should be processing these emails and then moving them to the AMPQ-PROD-PROCESSED mailbox, even if these emails are invalid or contain duplicate messages.
+**Dead emails are still sitting in the AMPQ-PROD mailbox.  The ext-smtp-realtime MQ agent should be placing these emails in the ext-smtp queue.  The ext-smtp MQ agent should be processing these emails and then moving them to the AMPQ-PROD-PROCESSED mailbox, even if these emails are invalid or contain duplicate messages.**
 
 - Deployment impact: nil (however we need to fully understand what is happening in this scenario)
 
@@ -83,7 +83,7 @@ Dead emails are still sitting in the AMPQ-PROD mailbox.  The ext-smtp-realtime M
 Miscellaneous
 --------------------------------------
 
-1.	It was agreed when NC has time he will attempt to familiarise himself more deeply with the prodiguer stack.  This will widen the team’s deployment knowledge base and enable him to be more fluent in relation to deployments.
+**It was agreed when NC has time he will attempt to familiarise himself more deeply with the prodiguer stack.  This will widen the team’s deployment knowledge base and enable him to be more fluent in relation to deployments.**
 
 - Action: MG to email NC links to documents and source code that will enable him to improve his stack knowledge.
 
