@@ -55,25 +55,25 @@ Deployment Patches
 Testing issues
 --------------------------------------
 
-1.	When testing the front-end MG noticed that on the simulation detail page the list of jobs is not being displayed at all.
+When testing the front-end MG noticed that on the simulation detail page the list of jobs is not being displayed at all.
 
 - Deployment impact: blocker
 
 - Action: MG will debug front-end to verify that the web-service is returning page setup data correctly.  If the web-service response is OK then MG will debug javascript to see if a web-service parsing issue is causing the issue.  
 
-2.	Some job related web-socket events are not being pushed to the browser.  unicode decoding issues are being logged on the web-server and this appears to be causing the event push to be aborted.
+Some job related web-socket events are not being pushed to the browser.  unicode decoding issues are being logged on the web-server and this appears to be causing the event push to be aborted.
 
 - Deployment impact: blocker
 
 - Action: MG Will try to replicate issue in his environment.  If replicable he will analyse and issue patch.  If not he will downgrade his python version to 2.7.6 and retest.
 
-3.	The python library ‘requests' is reporting warnings due to urllib3 not performing client certificate validation on HTTPS calls to the prodiguer web service from either the prodiguer-client or the internal-api MQ consumer. 
+The python library ‘requests' is reporting warnings due to urllib3 not performing client certificate validation on HTTPS calls to the prodiguer web service from either the prodiguer-client or the internal-api MQ consumer. 
 
 - Deployment impact: nil (however logs will contain these warnings)
 
 - Action: MG will explore options for either suppressing (temporarily) this warning or for issuing a patch so that requests does not use urllib3 when performing the certificate negotiation.
 
-4.	Dead emails are still sitting in the AMPQ-PROD mailbox.  The ext-smtp-realtime MQ agent should be placing these emails in the ext-smtp queue.  The ext-smtp MQ agent should be processing these emails and then moving them to the AMPQ-PROD-PROCESSED mailbox, even if these emails are invalid or contain duplicate messages.
+Dead emails are still sitting in the AMPQ-PROD mailbox.  The ext-smtp-realtime MQ agent should be placing these emails in the ext-smtp queue.  The ext-smtp MQ agent should be processing these emails and then moving them to the AMPQ-PROD-PROCESSED mailbox, even if these emails are invalid or contain duplicate messages.
 
 - Deployment impact: nil (however we need to fully understand what is happening in this scenario)
 
