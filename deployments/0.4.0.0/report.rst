@@ -91,3 +91,4 @@ Miscellaneous
 
 - Action: MG to notify NC when developer documentation v1 is available.
 
+**It was agreed that when deploying significant platform upgrades both NC and MG have to be present.  Telephone / email releases are reserved for patches or minor upgrades.**
