@@ -1,9 +1,9 @@
 Summary
 =======================================================
 
-Here is the deployment report for the 0.4.0.0 platform release.  Before reading the report it is worth reviewing the deployment note & the deployment change log. 
+Here is the deployment report for the 0.4.0.0 platform release.  Before reading the report it is worth reviewing the `deployment note <https://github.com/Prodiguer/prodiguer-docs/blob/master/deployments/0.4.0.0/deployment-notes.pdf>`_ & the `deployment change log <https://github.com/Prodiguer/prodiguer-docs/blob/master/deployments/0.4.0.0/changelog.rst>`_.
 
-Deployment to all servers was quite smooth.  Nothing blocked the deployment being rolled out.  However 2 front-end related issues have been identified that need immediate attention.
+Deployment to all servers was smooth.  There are currently 2 identified blockers, both relate to the interaction between the front-end and the web-service.  
 
 Deployment issues
 --------------------------------------
@@ -12,13 +12,11 @@ Deployment issues
 
 - Deployment Impact: nil
 
-- Action: MG will update the template mq-supervisord.conf file accordingly
-
-- Action: NC will update the /opt/prodiguer/ops/daemons/mq/supervisord.conf file on the MQ server when given green light by MG.
+- Action: MG will update the mq-supervisord.conf template accordingly and then inform NC who will update the server accordingly.
 
 2.	On the prodiguer test server the prodiguer venv python version is 2.7.6.  This should be updated to 2.7.10.
 
-- Action: MG to test shell update-python command.
+- Action: MG will verify that prodiguer-stack-update-python command is good to go.
 
 - Action: NC will rollout update when given green light by MG.
 
@@ -26,7 +24,7 @@ Deployment issues
 
 - Deployment Impact: nil
 
-- Action: MG to update the migrate sql script.
+- Action: MG will update the relevant migrate sql script.
 
 4.	python is buffering output to the daemon log files.  The -u python flag needs to be applied but only when debugging (e.g. when testing system deployment).
 
@@ -47,11 +45,11 @@ Deployment Patches
 
 1.	When running the front-end from NC’s browser the calls to the underlying web-service were being rejected as NC’s browser was appending a cookie to the HTTP request headers.  On the server side HTTP request validation was enforcing the constraint that the HTTP request should not contain any cookies.  A patch was issued to relax this constraint.
 
-	Deployment Impact: blocker - resolved with simple patch
+- Deployment Impact: blocker - resolved with simple patch
 
-	Action: MG will analyse why NC’s browser injected this cookie into the request and if viable add cookie validation on the server side.
+- Action: MG will analyse why NC’s browser injected this cookie into the request and if viable add cookie validation on the server side.
 
-	Action NC: will email MG the version of Firefox that he is currently using.
+- Action NC: will email MG the version of Firefox that he is currently using.
 
 
 Testing issues
