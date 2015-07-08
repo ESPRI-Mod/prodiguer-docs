@@ -59,12 +59,10 @@ The Prodiguer platform is distributed across different types of machine.  Code r
 **PRODIGUER_MQ_RABBIT_SSL_CLIENT_CERT**  (if client ssl cert used)
 * Description:	Client ssl cert file path.  
 * Machines:		mq, dev
-* Default		$PRODIGUER_HOME/ops/certs/rabbitmq/client-cert.pem  
 
 **PRODIGUER_MQ_RABBIT_SSL_CLIENT_KEY**  (if client ssl cert used)
 * Description:	Client ssl key file path.  
 * Machines:		mq, dev
-* Default		$PRODIGUER_HOME/ops/certs/rabbitmq/client-key.pem  
 
 **PRODIGUER_MQ_IMAP_PASSWORD**  
 * Description:	IMAP server password for the _superviseur_ account.  
