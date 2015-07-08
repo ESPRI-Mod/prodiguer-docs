@@ -55,11 +55,11 @@ Deployment Patches
 Testing issues
 --------------------------------------
 
-- When testing the front-end MG noticed that on the simulation detail page the list of jobs is not being displayed at all.
+**When testing the front-end MG noticed that on the simulation detail page the list of jobs is not being displayed at all.**
 
--- Deployment impact: blocker
+- Deployment impact: blocker
 
--- Action: MG will debug front-end to verify that the web-service is returning page setup data correctly.  If the web-service response is OK then MG will debug javascript to see if a web-service parsing issue is causing the issue.  
+- Action: MG will debug front-end to verify that the web-service is returning page setup data correctly.  If the web-service response is OK then MG will debug javascript to see if a web-service parsing issue is causing the issue.  
 
 Some job related web-socket events are not being pushed to the browser.  unicode decoding issues are being logged on the web-server and this appears to be causing the event push to be aborted.
 
