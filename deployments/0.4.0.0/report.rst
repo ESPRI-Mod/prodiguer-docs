@@ -61,9 +61,9 @@ Testing issues
 
 - Deployment impact: blocker
 
-- Action: MG will debug front-end to verify that the web-service is returning page setup data correctly.  If the web-service response is OK then MG will debug javascript to see if a web-service parsing issue is causing the issue.  He has not been able to replicate this in dev environment.
+- Action: MG has debugged front-end and identified the issue.  Existing job records written to database prior to the deployment do not have the tbl_job.typeof column assigned to 'compute'.  Threrefore the front-end skips these jobs as they are of an unrecognized type.  MG will issue either a FE patch (i..e javascrupt update) or a DB patch (i.e. a sql script to set tbl_job.typeof column default value 'compute'.
 
-**Some job related web-socket events are not being pushed to the browser, they are related to unicode decoding issues.**
+**Some job related web-socket events are not being pushed to the browser.  It seems as if unicode decoding issues are occurring when the event is being processed on the server.**
 
 - Deployment impact: blocker
 
