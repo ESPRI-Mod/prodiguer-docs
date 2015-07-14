@@ -14,6 +14,10 @@ You have activated the prodiguer commands:
 source ~/.bash_profile
 </pre></code>
 
+## Stack bootstrap
+
+<pre><code>prodiguer-stack-bootstrap</pre></code>
+
 ## Stack installation  
 
 <pre><code>prodiguer-stack-install</pre></code>
