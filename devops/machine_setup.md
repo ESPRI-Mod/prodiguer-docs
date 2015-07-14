@@ -1,6 +1,6 @@
 # Prodiguer Machine Setup
 
-Prodiguer is a highly distributed messaging platform upon which are built several applications.  The platform runs across several types of machine and each one has to be setup accordingly so that all required dependencies are installed and running.  
+Prodiguer is a highly distributed messaging platform.  The platform runs across several types of machine and each one has to be setup accordingly so that all required dependencies are installed and running.  
 
 The setup process takes upto 30 minutes and installs some or all of the following (depending upon machine type):  
 
