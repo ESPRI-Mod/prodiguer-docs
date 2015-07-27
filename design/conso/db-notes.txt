@@ -1,0 +1,58 @@
+> Pour reproduire l'existant, il faudrait quelque chose comme ça :
+>
+> * Projets
+>    =======
+>    - id projet
+>    - centre
+>    - machine
+>    - nom projet
+>    - node type
+>    - allocation / node type
+>    - date début
+>    - date fin
+>    - logins (?)
+>
+> Avec au choix :
+>    - autant de binômes de colonnes node/alloc qu'il y a de type de nœuds
+différents sur les différentes machines, seuls ceux concernés étant alimentés
+>      (id = projet)
+>    - un seul binôme de colonnes, mais autant de lignes que nécessaire
+>      (id = projet + node)
+> Plutôt la deuxième, non ?
+>
+> La liste des logins n'est pas vraiment nécessaire si tous sont dans la table
+suivante, même à zéro.
+>
+>
+> * Conso bilan
+>    ===========
+>    - id projet (ou nom + node)
+>    - date
+>    - conso totale (heures)
+>    - conso totale (%)       <== donné dans ccc_myproject, et utilisé pour le
+calcul de la date de début
+>    - moyenne journalière jobs running
+>    - moyenne journalière jobs pending
+>    - écart type journalière jobs running
+>    - écart type journalière jobs pending
+>
+>
+> * Conso par login
+>    ===============
+>    - id projet (ou nom + node)
+>    - login
+>    - date
+>    - conso totale
+>
+>
+> * Occupation STORE
+>    ================
+>    - id projet (ou nom + node)
+>    - login
+>    - date
+>    - nom répertoire
+>    - taille répertoire
+>
+>
+> Et puis, il faudrait des clés (secondaires) sur les logins et les dates (si ça
+s'applique au postgreSQL...).

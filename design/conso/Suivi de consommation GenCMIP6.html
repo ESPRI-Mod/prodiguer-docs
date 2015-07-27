@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Suivi de consommation GenCMIP6">
+  <meta name="author" content="Sonia Labetoulle">
+  <title>Suivi de consommation GenCMIP6</title>
+
+  <style>
+    body {
+      background-color: black;
+      margin: 0px 10%;
+    }
+
+    #main {
+      background-color: linen;
+      padding: 25px;
+    }
+
+    img {
+      width: 30%;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      height: 60px;
+      /* border: 1px solid #ff0000; */
+    }
+
+    div.img {
+      margin: 5px;
+      padding: 5px;
+      /* border: 1px solid #0000ff; */
+      height: auto;
+      width: 31%;
+      float: left;
+      text-align: center;
+    }
+
+    div.img img {
+      width: 95%;
+    }
+
+    .clear {
+        clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+
+    <h1>Conso GenCMIP6</h1>
+
+    <div class="img">
+      <h2>Jobs running et pending, heure par heure</h2>
+      <a href="jobs.pdf">
+        <img src="img/jobs.png" 
+             alt="Jobs running et pending, heure par heure" />
+      </a>
+    </div>
+
+    <div class="img">
+      <h2>Conso globale</h2>
+      <a href="bilan.pdf">
+        <img src="img/bilan.png" alt="Conso globale" />
+      </a>
+    </div>
+
+    <div class="img">
+      <h2>Conso globale et moyenne journalière des jobs</h2>
+      <a href="bilan_jobs.pdf">
+        <img src="img/bilan_jobs.png" 
+             alt="Conso globale et moyenne journalière des jobs" />
+      </a>
+    </div>
+
+    <div class="text_line"></div>
+
+    <div class="img">
+      <h2>Conso par login</h2>
+      <a href="login.pdf">
+        <img src="img/login.png" alt="Conso par login" />
+      </a>
+    </div>
+
+    <div class="img">
+      <h2>Occupation du STOREDIR par login</h2>
+      <a href="store.pdf">
+        <img src="img/store.png" 
+             alt="Occupation du STOREDIR par login" />
+      </a>
+    </div>
+
+    <div class="clear"></div>
+
+  </div>
+</body>
+</html>

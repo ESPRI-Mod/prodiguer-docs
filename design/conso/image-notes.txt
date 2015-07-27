@@ -1,0 +1,9 @@
+image-jobs.png = Jobs running et pending, heure par heure
+
+image-blian.png = Conso globale
+
+image-bilan_jobs.png = Conso globale et moyenne journalière des jobs
+
+image-login.png = Conso par login
+
+image-store.png = Occupation du STOREDIR par login
