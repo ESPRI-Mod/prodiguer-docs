@@ -1,7 +1,12 @@
 PRODIGUER working team
 ======================
 
-Welcome to the PRODIGUER working team main page.  You will find here all public information related to our developments.
+Welcome to the PRODIGUER working team main page.
+
+You will find here all public information related to our developments.
+
+.. image:: PRODIGUER-logo.png
+   :scale: 80 %
 
 Introduction
 ------------
@@ -14,29 +19,36 @@ The PRODIGUER working team also provides support and assistance in the analysis 
 
 Core team
 ---------
-+-----------------------------------+----------------------------+
-| Name                              | Mail                       |
-+===================================+============================+
-| Sébastien DENVIL (IPSL/CNRS)      | sdipsl@ipsl.jussieu.fr     |
-+-----------------------------------+----------------------------+
-| Guillaume LEVAVASSEUR (IPSL/UPMC) | glipsl@ipsl.jussieu.fr     |
-+-----------------------------------+----------------------------+
-| Nicolas CARENTON (IPSL/CNRS)      | ncarenton@ipsl.jussieu.fr  |
-+-----------------------------------+----------------------------+
-| Mark GREENSLADE (IPSL/UPMC)       | momipsl@ipsl.jussieu.fr    |
-+-----------------------------------+----------------------------+
-| Jérôme RACIAZEK (IPSL/CNRS)       | jripsl@ipsl.jussieu.fr     |
-+-----------------------------------+----------------------------+
-| Nikolay KADYGROV (IPSL/UPMC)      | nkadygrov@ipsl.jussieu.fr  |
-+-----------------------------------+----------------------------+
-| Atef BENNASSER (IPSL/UPMC)        | abennasser@ipsl.jussieu.fr |
-+-----------------------------------+----------------------------+
++-----------------------+-------------+----------------------------+
+| Name                  | Affiliation | Mail                       |
++=======================+=============+============================+
+| Sébastien DENVIL      | IPSL/CNRS   | sdipsl@ipsl.jussieu.fr     |
++-----------------------+-------------+----------------------------+
+| Guillaume LEVAVASSEUR | IPSL/UPMC   | glipsl@ipsl.jussieu.fr     |
++-----------------------+-------------+----------------------------+
+| Nicolas CARENTON      | IPSL/CNRS   | ncarenton@ipsl.jussieu.fr  |
++-----------------------+-------------+----------------------------+
+| Mark GREENSLADE       | IPSL/UPMC   | momipsl@ipsl.jussieu.fr    |
++-----------------------+-------------+----------------------------+
+| Jérôme RACIAZEK       | IPSL/CNRS   | jripsl@ipsl.jussieu.fr     |
++-----------------------+-------------+----------------------------+
+| Nikolay KADYGROV      | IPSL/UPMC   | nkadygrov@ipsl.jussieu.fr  |
++-----------------------+-------------+----------------------------+
+| Atef BENNASSER        | IPSL/UPMC   | abennasser@ipsl.jussieu.fr |
++-----------------------+-------------+----------------------------+
 
-PRODIGUER messaging plateform
-*****************************
+Development guidelines
+----------------------
 
-SYNDA data access-tool
-**********************
+Data documentation
+******************
 
-Data analysis tools
+Data synchronisation
+********************
+
+Messaging plateform
 *******************
+
+Analysis plateform
+******************
+.. include:: analysis.rst
