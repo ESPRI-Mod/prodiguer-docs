@@ -33,6 +33,3 @@ Prodiguer Client
 
 Environment metrics
 -------------------
-
-IPSL-CM Errata
---------------

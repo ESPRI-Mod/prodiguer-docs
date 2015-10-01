@@ -2,7 +2,6 @@
 .. _IPSL: http://www.ipsl.fr/
 .. _CNRS: http://www.cnrs.fr/
 
-
 PRODIGUER working team
 ======================
 
@@ -51,6 +50,7 @@ Partners
 
 Core team
 ---------
+
 +-----------------------+-------------+----------------------------+
 | Name                  | Affiliation | Mail                       |
 +=======================+=============+============================+
@@ -74,11 +74,19 @@ Activity scope
 --------------
 
 The PRODIGUER working team aims to ensure the pivotal position at the interface between French researchers and international climate data. This activity includes:
- * the dissemination of climate simulations made by French teams for the international community on climate science, and
- * providing reference simulations and post-processing data and metadata according to international standards.
+
+* the dissemination of climate simulations made by French teams for the international community on climate science, and
+* providing reference simulations and post-processing data and metadata according to international standards.
 
 Such a distribution service will be referred to different simulations analysis projects by the scientific community, to the achievement of regional simulations based on the results of large-scale projections, and the dissemination of results for many impact studies. The PRODIGUER working team is part of networks providing data simulations at international and European levels and make data available for emerging climate services. The relevant simulations, formats and protocols used follow the recommendations bet up to the dissemination of CMIP simulations whose results will feed into the fifth IPCC report.
 
 Development guidelines
 ----------------------
+
+Introduction
+************
+
 The PRODIGUER working team designs, develops and deploys applications to support research teams from the `IPSL`_. These tools are intended to facilitate the distribution, access and analysis of international climate data. At the interface between researchers and data, the PRODIGUER team is part of the Earth System Grid Federation (`ESG-F`_) which controls the distribution of global climate data. We manage deployment and maintenance of French datanodes and raise the needs of French scientists on the forefront of the international discussions. The PRODIGUER working team also provides support and assistance in the analysis of data by developing and updating various tools within the reach of researchers.
+
+Table of content
+****************
