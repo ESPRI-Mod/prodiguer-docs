@@ -1,0 +1,44 @@
+
+## 9 ) NetCDF latest symlink
+
+Here starts the dataset pipeline, **only if CMIP5 variable of the corresponding dataset have been all processed through the variable pipeline (reaching a `done` status in the database).**
+
+**This step creates a symlink pointing to the latest version of the dataset. It unlinks the previous latest symlink if exists.**
+
+We decided to build the pipeline with **a "full-slave" behavior regarding to "synda transfert". It means that whatever the dataset, a latest symlink is created regardless its version. Consequently, only datasets flagged as "latest" are processed by the pipeline following the creation date in the case of version updates.**
+
+## 10 ) XML latest symlink
+
+For a clearer experience, we decided to create latest symlink for `cdscan` aggregations.
+
+In `/prodigfs/esg/xml/CMIP5/<experiment>/<realm>/<frequency>/<variable>/.`, this step creates **`cmip5.<model>.<experiment>.<ensemble>.<frequency>.<realm>.<MIP_table>.<variable>.latest.xml`** pointing to the latest version of the corresponding XML files.
+
+## 11 ) Build mapfiles
+
+**This step is executed on another VM hosting the IPSL private node in order to publish all files from `synda` requests.** 
+
+**One a dataset is completely processed through the pipeline, we start the publication**. The publication process of ESG-F nodes requires mapfiles. **Mapfiles are text files where each line describes a file to publish. A line is composed by full file path, file size, last modification time in Unix units, the checksum and checksum type, all pipe-separated**. `esg_mapfiles.py` is a flexible alternative Python command-line tool allowing you to easily generate mapfiles independently from ESG-F.
+
+Using the `esg-user` login, we put all generated mapfiles in `/home/esg-user/mapfiles/pending/.`, awaiting publication. We generate one mapfile per dataset for clear publication management.
+
+More details and to use our script as a stand-alone command-line: [https://github.com/Prodiguer/esgf-mapfiles](https://github.com/Prodiguer/esgf-mapfiles)
+
+## 12 ) Publication on ESGF private archive
+
+**This step publishes the datasets from `synda` on our IPSL private node using previous mapfiles: [http://esgf-local.ipsl.fr/esgf-web-fe/](http://esgf-local.ipsl.fr/esgf-web-fe/).**
+
+**The publication occurs each day at midnight using the `esg-user` crontab**. The following steps are started in the order:
+* Mapfiles comparison between `/home/esg-user/mapfiles/pending/.` and `/home/esg-user/mapfiles/published/.`
+* If a mapfile does not exist in ***published*** path or has different checksum, it is selected for publication. All selected mapfiles are concatenated in the limit of 30,000 files to publish.
+* Vocabulary is added to `esg-auto.ini` and `esgcet_models_table.txt` if necessary.
+* Initialize controlled vocabulary and tables with `esginitialize`.
+* Datanode publication with `esgpublish --thredds --new-version 1 --replace --no-thredds-reinit`: the version is always set to 1 replacing the dataset by its latest version (`synda` only process latest version).
+* Indexnode publication with `esgpublish --thredds-reinit --publish --noscan`: if an error occurs at this level, we unpublish the dataset avoiding conflicts.
+* All selected mapfiles are copied from `/home/esg-user/mapfiles/pending/.` to `/home/esg-user/mapfiles/published/.`
+* If a mapfile does not exist in ***pending*** path, it is selected for unpublication process.
+* Unpublication with `esgunpublish --database-delete --no-republish`
+* All selected mapfiles are removed from `/home/esg-user/mapfiles/published/.`
+
+# [Find THREDDS or XML aggregations](https://github.com/Prodiguer/cmip5-analysis-stack/tree/master/find_agg)
+
+ (efficient verification and compliant rewrite of time axis, detection of overlapping files, fast selection of available files based on user specifications, etc.).

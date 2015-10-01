@@ -1,0 +1,35 @@
+Messaging plateform
+===================
+
+Introduction
+------------
+
+Monitoring
+----------
+
+Synopsis
+********
+
+libIGCM
+*******
+
+Prodiguer Shell
+***************
+
+Prodiguer Server
+****************
+
+Prodiguer Controlled Vocabulary
+*******************************
+
+Simulation metrics
+------------------
+
+Prodiguer Metrics Formatter
+***************************
+
+Prodiguer Client
+****************
+
+Environment metrics
+-------------------

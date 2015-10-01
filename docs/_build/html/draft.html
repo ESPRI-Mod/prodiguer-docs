@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>&lt;no title&gt; &mdash; Prodiguer Documentation 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Prodiguer Documentation 1.0 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="index.html">Prodiguer Documentation 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <p>## 9 ) NetCDF latest symlink</p>
+<p>Here starts the dataset pipeline, <strong>only if CMIP5 variable of the corresponding dataset have been all processed through the variable pipeline (reaching a `done` status in the database).</strong></p>
+<p><strong>This step creates a symlink pointing to the latest version of the dataset. It unlinks the previous latest symlink if exists.</strong></p>
+<p>We decided to build the pipeline with <strong>a &#8220;full-slave&#8221; behavior regarding to &#8220;synda transfert&#8221;. It means that whatever the dataset, a latest symlink is created regardless its version. Consequently, only datasets flagged as &#8220;latest&#8221; are processed by the pipeline following the creation date in the case of version updates.</strong></p>
+<p>## 10 ) XML latest symlink</p>
+<p>For a clearer experience, we decided to create latest symlink for <cite>cdscan</cite> aggregations.</p>
+<p>In <cite>/prodigfs/esg/xml/CMIP5/&lt;experiment&gt;/&lt;realm&gt;/&lt;frequency&gt;/&lt;variable&gt;/.</cite>, this step creates <strong>`cmip5.&lt;model&gt;.&lt;experiment&gt;.&lt;ensemble&gt;.&lt;frequency&gt;.&lt;realm&gt;.&lt;MIP_table&gt;.&lt;variable&gt;.latest.xml`</strong> pointing to the latest version of the corresponding XML files.</p>
+<p>## 11 ) Build mapfiles</p>
+<p><strong>This step is executed on another VM hosting the IPSL private node in order to publish all files from `synda` requests.</strong></p>
+<p><strong>One a dataset is completely processed through the pipeline, we start the publication</strong>. The publication process of ESG-F nodes requires mapfiles. <strong>Mapfiles are text files where each line describes a file to publish. A line is composed by full file path, file size, last modification time in Unix units, the checksum and checksum type, all pipe-separated</strong>. <cite>esg_mapfiles.py</cite> is a flexible alternative Python command-line tool allowing you to easily generate mapfiles independently from ESG-F.</p>
+<p>Using the <cite>esg-user</cite> login, we put all generated mapfiles in <cite>/home/esg-user/mapfiles/pending/.</cite>, awaiting publication. We generate one mapfile per dataset for clear publication management.</p>
+<p>More details and to use our script as a stand-alone command-line: [<a class="reference external" href="https://github.com/Prodiguer/esgf-mapfiles](https://github.com/Prodiguer/esgf-mapfiles">https://github.com/Prodiguer/esgf-mapfiles](https://github.com/Prodiguer/esgf-mapfiles</a>)</p>
+<p>## 12 ) Publication on ESGF private archive</p>
+<p><strong>This step publishes the datasets from `synda` on our IPSL private node using previous mapfiles: [http://esgf-local.ipsl.fr/esgf-web-fe/](http://esgf-local.ipsl.fr/esgf-web-fe/).</strong></p>
+<p><strong>The publication occurs each day at midnight using the `esg-user` crontab</strong>. The following steps are started in the order:
+* Mapfiles comparison between <cite>/home/esg-user/mapfiles/pending/.</cite> and <cite>/home/esg-user/mapfiles/published/.</cite>
+* If a mapfile does not exist in <strong>*published*</strong> path or has different checksum, it is selected for publication. All selected mapfiles are concatenated in the limit of 30,000 files to publish.
+* Vocabulary is added to <cite>esg-auto.ini</cite> and <cite>esgcet_models_table.txt</cite> if necessary.
+* Initialize controlled vocabulary and tables with <cite>esginitialize</cite>.
+* Datanode publication with <cite>esgpublish &#8211;thredds &#8211;new-version 1 &#8211;replace &#8211;no-thredds-reinit</cite>: the version is always set to 1 replacing the dataset by its latest version (<cite>synda</cite> only process latest version).
+* Indexnode publication with <cite>esgpublish &#8211;thredds-reinit &#8211;publish &#8211;noscan</cite>: if an error occurs at this level, we unpublish the dataset avoiding conflicts.
+* All selected mapfiles are copied from <cite>/home/esg-user/mapfiles/pending/.</cite> to <cite>/home/esg-user/mapfiles/published/.</cite>
+* If a mapfile does not exist in <strong>*pending*</strong> path, it is selected for unpublication process.
+* Unpublication with <cite>esgunpublish &#8211;database-delete &#8211;no-republish</cite>
+* All selected mapfiles are removed from <cite>/home/esg-user/mapfiles/published/.</cite></p>
+<p># [Find THREDDS or XML aggregations](<a class="reference external" href="https://github.com/Prodiguer/cmip5-analysis-stack/tree/master/find_agg">https://github.com/Prodiguer/cmip5-analysis-stack/tree/master/find_agg</a>)</p>
+<blockquote>
+<div>(efficient verification and compliant rewrite of time axis, detection of overlapping files, fast selection of available files based on user specifications, etc.).</div></blockquote>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/draft.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="index.html">Prodiguer Documentation 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Prodiguer Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
