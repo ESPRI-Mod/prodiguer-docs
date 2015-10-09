@@ -1,20 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!DOCTYPE html>
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Analysis plateform &mdash; Prodiguer Documentation 1.0 documentation</title>
+    <title>Analysis plateform &mdash; Prodiguer Documentation  documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/prodiguer-styles.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.0',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,28 +26,142 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Prodiguer Documentation 1.0 documentation" href="index.html" />
-    <link rel="prev" title="Data synchronization" href="synchronization.html" /> 
-  </head>
-  <body>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="synchronization.html" title="Data synchronization"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Prodiguer Documentation 1.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>  
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Prodiguer Documentation  documentation" href="index.html" />
+    <link rel="prev" title="Data synchronization" href="synchronization.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          PRODIGUER Home</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
             
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Menu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="esgf.html">ESGF integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="messaging.html">Messaging plateform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="messaging.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="messaging.html#monitoring">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="messaging.html#simulation-metrics">Simulation metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="messaging.html#environment-metrics">Environment metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Data documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html#earth-system-documentation-es-doc">Earth-System DOCumentation (ES-DOC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html#ipsl-cm-errata">IPSL-CM Errata</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="synchronization.html">Data synchronization</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Analysis plateform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#post-processing-pipeline-for-mip-data">Post-processing pipeline for MIP data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search-and-get-mip-aggregations">Search and get MIP aggregations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#web-processing-services-wps">Web Processing Services (WPS)</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Section menu <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Analysis plateform</a><ul>
+<li><a class="reference internal" href="#post-processing-pipeline-for-mip-data">Post-processing pipeline for MIP data</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#data-request-and-downaloading">1. Data request and downaloading</a></li>
+<li><a class="reference internal" href="#products-merging">2. Products merging</a></li>
+<li><a class="reference internal" href="#overlaps-removing">3. Overlaps removing</a></li>
+<li><a class="reference internal" href="#time-axis-normalization">4. Time axis normalization</a></li>
+<li><a class="reference internal" href="#cdscan-xml-aggregations">5. cdscan/XML aggregations</a></li>
+<li><a class="reference internal" href="#copy-to-end-user-disk-space">6. Copy to end-user disk space</a></li>
+<li><a class="reference internal" href="#netcdf-latest-symlink">7. NetCDF latest symlink</a></li>
+<li><a class="reference internal" href="#xml-latest-symlink">8. XML latest symlink</a></li>
+<li><a class="reference internal" href="#mapfiles-generation">9. Mapfiles generation</a></li>
+<li><a class="reference internal" href="#thredds-opendap-aggregations">11. THREDDS/OpenDAP aggregations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#search-and-get-mip-aggregations">Search and get MIP aggregations</a></li>
+<li><a class="reference internal" href="#web-processing-services-wps">Web Processing Services (WPS)</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="synchronization.html" title="Previous Chapter: Data synchronization"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Data synchroniza...</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/analysis.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
   <div class="section" id="analysis-plateform">
 <h1>Analysis plateform<a class="headerlink" href="#analysis-plateform" title="Permalink to this headline">¶</a></h1>
 <p>The PRODIGUER working team provides a set of specialized tools design to streamline and to ease analysis of data coming from the <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a> distributed digital repositories. These tools are available as stand-alone command-line. They are also part of a post-processing pipeline deployed on CICLAD cluster as follows.</p>
@@ -69,18 +186,18 @@
 <li>The involved (atomic) dataset pattern,</li>
 <li>The next pending process/transition,</li>
 <li>The state ID,</li>
-<li>The process status (<tt class="docutils literal"><span class="pre">waiting</span></tt>, <tt class="docutils literal"><span class="pre">running</span></tt>, <tt class="docutils literal"><span class="pre">error</span></tt> or <tt class="docutils literal"><span class="pre">done</span></tt>),</li>
+<li>The process status (<code class="docutils literal"><span class="pre">waiting</span></code>, <code class="docutils literal"><span class="pre">running</span></code>, <code class="docutils literal"><span class="pre">error</span></code> or <code class="docutils literal"><span class="pre">done</span></code>),</li>
 <li>The entry creation date,</li>
 <li>The last modifiction date of the entry.</li>
 </ul>
 </dd>
 </dl>
-<p>A Python daemon (whom we call a &#8220;worker&#8221;) deals with the database using a Remote Procedure Call (RPC) client skeleton. For any waiting job the worker inputs the corresponding (atomic) dataset to each process. Any transition with <tt class="docutils literal"><span class="pre">waiting</span></tt> status is handle by the worker that forks a Shell chlid-process or loads a Python script as module, accordingly to the job. Finally the worker returns the job status and updates the corresponding database entry to reach the next transition. No more jobs appears when all atomic datasets and datasets reach the <tt class="docutils literal"><span class="pre">done</span></tt> status.</p>
+<p>A Python daemon (whom we call a &#8220;worker&#8221;) deals with the database using a Remote Procedure Call (RPC) client skeleton. For any waiting job the worker inputs the corresponding (atomic) dataset to each process. Any transition with <code class="docutils literal"><span class="pre">waiting</span></code> status is handle by the worker that forks a Shell chlid-process or loads a Python script as module, accordingly to the job. Finally the worker returns the job status and updates the corresponding database entry to reach the next transition. No more jobs appears when all atomic datasets and datasets reach the <code class="docutils literal"><span class="pre">done</span></code> status.</p>
 </div>
 <div class="section" id="data-request-and-downaloading">
 <h3>1. Data request and downaloading<a class="headerlink" href="#data-request-and-downaloading" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://synda.readthedocs.org/en/latest/">SYNDA</a> is a python program managing discovery, authentication, certificate and download processes from the <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a> archives in an easy way. The download of files is achieved through the exploration of the <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a> data repositories governed by a configuration files in which user defines its search criteria. These criteria pertains to metadata attributes used for discovery of climate data. These attributes are defined by Data Reference Syntax (DRS). Thus, a user can enter lists of values for variables, frequencies, experiments and ensemble numbers into a configuration as directed by already provided templates. Using these templates, SYNDA explores the <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a> nodes and downloads all the corresponding available files. The program may be run regularly to download the possible new files.</p>
-<p>In this context, SYNDA downloads available files from <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a> onto local filesystem. SYNDA ensures that an atomic dataset is completely donwloaded before hands over to post-processing pipeline. <tt class="docutils literal"><span class="pre">synda</span></tt> rebuild the dataset tree on local filesystem according to the DRS between the project and version facets. <tt class="docutils literal"><span class="pre">synda</span></tt> is compatible whatever the DRS of the project. A dataset should just be defined by a project ID and a version number with a DRS-free between both facets (i.e., <tt class="docutils literal"><span class="pre">/prodigfs/esgf/mirror/$PROJECT/[...]/$VERSION</span></tt>). Each downloaded atomic dataset leads to a new event committed in the pipeline database. This event initializes the atomic dataset processes chain. If a dataset is discovered by <tt class="docutils literal"><span class="pre">synda</span></tt> as a latest version, a dataset entry is created into the database and will be initiated when all atomic dataset will be done. Consequently, only the latest datasets are post-processed.</p>
+<p>In this context, SYNDA downloads available files from <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a> onto local filesystem. SYNDA ensures that an atomic dataset is completely donwloaded before hands over to post-processing pipeline. <code class="docutils literal"><span class="pre">synda</span></code> rebuild the dataset tree on local filesystem according to the DRS between the project and version facets. <code class="docutils literal"><span class="pre">synda</span></code> is compatible whatever the DRS of the project. A dataset should just be defined by a project ID and a version number with a DRS-free between both facets (i.e., <code class="docutils literal"><span class="pre">/prodigfs/esgf/mirror/$PROJECT/[...]/$VERSION</span></code>). Each downloaded atomic dataset leads to a new event committed in the pipeline database. This event initializes the atomic dataset processes chain. If a dataset is discovered by <code class="docutils literal"><span class="pre">synda</span></code> as a latest version, a dataset entry is created into the database and will be initiated when all atomic dataset will be done. Consequently, only the latest datasets are post-processed.</p>
 <p>More about how submit a <a class="reference external" href="http://synda.readthedocs.org/en/latest/">SYNDA</a> template <a class="reference external" href="http://forge.ipsl.jussieu.fr/prodiguer/wiki/docs/synda">here</a>.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -92,7 +209,7 @@
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>Output directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/esgf/mirror/$PROJECT/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/esgf/mirror/$PROJECT/.</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -120,10 +237,10 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Input directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/esgf/mirror/$PROJECT/output*/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/esgf/mirror/$PROJECT/output*/.</span></code></td>
 </tr>
 <tr class="row-even"><td>Output directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/esgf/process/$PROJECT/merge/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/esgf/process/$PROJECT/merge/.</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -140,15 +257,15 @@
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Because of a significant number of exceptions, we decided to take <tt class="docutils literal"><span class="pre">output1</span></tt> as reference in the case of products with same filenames. Moreover, this step leads to a deprecated product</p>
+<p class="last">Because of a significant number of exceptions, we decided to take <code class="docutils literal"><span class="pre">output1</span></code> as reference in the case of products with same filenames. Moreover, this step leads to a deprecated product</p>
 </div>
 </div>
 <div class="section" id="overlaps-removing">
 <h3>3. Overlaps removing<a class="headerlink" href="#overlaps-removing" title="Permalink to this headline">¶</a></h3>
 <p>Because the scheme of <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a> chunked files is not fixed, the time period covered by an atomic dataset sometimes includes unecessary overlaps. Sometimes, an overlap occurs leading to deprecated file(s).</p>
-<p><tt class="docutils literal"><span class="pre">overlap</span></tt> is a command-line tool allowing you to easily check and delete all chunked overlapping files in your atmoic dataset in order to save disk space. Through a network <tt class="docutils literal"><span class="pre">overlap</span></tt> builds a directed graph, that is, graphs with directed edges. Each node on the graph is a file defined by its first date and the date next to the end directly read from the filename. <tt class="docutils literal"><span class="pre">overlap</span></tt> then uses the directed graph to find the shortest &#8220;date path&#8221; between all nodes, covering the whole time period. All excluded files from this &#8220;date path&#8221; are overlapping files.</p>
+<p><code class="docutils literal"><span class="pre">overlap</span></code> is a command-line tool allowing you to easily check and delete all chunked overlapping files in your atmoic dataset in order to save disk space. Through a network <code class="docutils literal"><span class="pre">overlap</span></code> builds a directed graph, that is, graphs with directed edges. Each node on the graph is a file defined by its first date and the date next to the end directly read from the filename. <code class="docutils literal"><span class="pre">overlap</span></code> then uses the directed graph to find the shortest &#8220;date path&#8221; between all nodes, covering the whole time period. All excluded files from this &#8220;date path&#8221; are overlapping files.</p>
 <p>If a shortest &#8220;date path&#8221; is found with overlapping files, we remove the corresponding hard link. When no shortest &#8220;date path&#8221; can be found (i.e., a gap appears in the time series), nothing happens.</p>
-<p>Please refer to <a class="reference external" href="http://cmip5-overlap.readthedocs.org/en/latest/"><tt class="docutils literal"><span class="pre">overlap</span></tt> documentation</a> for further information.</p>
+<p>Please refer to <a class="reference external" href="http://cmip5-overlap.readthedocs.org/en/latest/"><code class="docutils literal"><span class="pre">overlap</span></code> documentation</a> for further information.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="28%" />
@@ -156,7 +273,7 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Input directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/esgf/process/$PROJECT/merge/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/esgf/process/$PROJECT/merge/.</span></code></td>
 </tr>
 <tr class="row-even"><td>Output directory</td>
 <td>&nbsp;</td>
@@ -169,17 +286,17 @@
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last"><tt class="docutils literal"><span class="pre">overlap</span></tt> is based on uncorrupted filename period dates and properly-defined times units, time calendar and frequency NetCDF attributes.</p>
+<p class="last"><code class="docutils literal"><span class="pre">overlap</span></code> is based on uncorrupted filename period dates and properly-defined times units, time calendar and frequency NetCDF attributes.</p>
 </div>
 </div>
 <div class="section" id="time-axis-normalization">
 <h3>4. Time axis normalization<a class="headerlink" href="#time-axis-normalization" title="Permalink to this headline">¶</a></h3>
 <p>NetCDF files describe all dimensions necessary to work with. In the climate community, this format is widely used following the <a class="reference external" href="http://cfconventions.org/">CF conventions</a>. The time axis is a key dimension. Unfortunately, this time axis often is mistaken in files from coupled climate models and leads to flawed studies or unused data. Consequently, these files cannot be used or, even worse, produced erroneous results, due to problems in the time axis description.</p>
-<p><tt class="docutils literal"><span class="pre">time_axis</span></tt> is a command-line tool allowing to easily check and rebuild a compliant time axis for downloaded files from the <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a>. The theoretical time axis is always rebuilt depending on the calendar, the frequency, the realm and the time units. These information are extracted from the global NetCDF attributes.</p>
+<p><code class="docutils literal"><span class="pre">time_axis</span></code> is a command-line tool allowing to easily check and rebuild a compliant time axis for downloaded files from the <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a>. The theoretical time axis is always rebuilt depending on the calendar, the frequency, the realm and the time units. These information are extracted from the global NetCDF attributes.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <dl class="last docutils">
-<dt><tt class="docutils literal"><span class="pre">time_axis</span></tt> checks:</dt>
+<dt><code class="docutils literal"><span class="pre">time_axis</span></code> checks:</dt>
 <dd><ul class="first last simple">
 <li>all timesteps,</li>
 <li>all time increments,</li>
@@ -191,7 +308,7 @@
 </dd>
 </dl>
 </div>
-<p>Please refer to <a class="reference external" href="http://cmip5-time-axis.readthedocs.org/en/latest/"><tt class="docutils literal"><span class="pre">time_axis</span></tt> documentation</a> for further information.</p>
+<p>Please refer to <a class="reference external" href="http://cmip5-time-axis.readthedocs.org/en/latest/"><code class="docutils literal"><span class="pre">time_axis</span></code> documentation</a> for further information.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="28%" />
@@ -199,7 +316,7 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Input directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/esgf/process/$PROJECT/merge/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/esgf/process/$PROJECT/merge/.</span></code></td>
 </tr>
 <tr class="row-even"><td>Output directory</td>
 <td>&nbsp;</td>
@@ -208,14 +325,14 @@
 </table>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last"><tt class="docutils literal"><span class="pre">time_axis</span></tt> is based on uncorrupted filename period dates and properly-defined times units, time calendar and frequency NetCDF attributes.</p>
+<p class="last"><code class="docutils literal"><span class="pre">time_axis</span></code> is based on uncorrupted filename period dates and properly-defined times units, time calendar and frequency NetCDF attributes.</p>
 </div>
 </div>
 <div class="section" id="cdscan-xml-aggregations">
 <h3>5. cdscan/XML aggregations<a class="headerlink" href="#cdscan-xml-aggregations" title="Permalink to this headline">¶</a></h3>
-<p>The <tt class="docutils literal"><span class="pre">cdscan</span></tt> command-line from the <a class="reference external" href="https://github.com/UV-CDAT">CDAT</a> python library fictitiously concatenates files from an atomic dataset along time dimension into XML files. These time aggregations avoid to deal with the files splitting depending on the model and the frequency over a time period. These XML aggregations contains all metadata, together with information describing how the dataset is partitioned into files.</p>
-<p>Each atomic dataset in the pipeline is scanned by a <tt class="docutils literal"><span class="pre">cdscan</span> <span class="pre">-x</span></tt> command-line. The produced XML files are stored using the following filename :</p>
-<p><tt class="docutils literal"><span class="pre">cmip5.&lt;model&gt;.&lt;experiment&gt;.&lt;ensemble&gt;.&lt;frequency&gt;.&lt;realm&gt;.&lt;MIP_table&gt;.&lt;variable&gt;.&lt;version&gt;.xml</span></tt></p>
+<p>The <code class="docutils literal"><span class="pre">cdscan</span></code> command-line from the <a class="reference external" href="https://github.com/UV-CDAT">CDAT</a> python library fictitiously concatenates files from an atomic dataset along time dimension into XML files. These time aggregations avoid to deal with the files splitting depending on the model and the frequency over a time period. These XML aggregations contains all metadata, together with information describing how the dataset is partitioned into files.</p>
+<p>Each atomic dataset in the pipeline is scanned by a <code class="docutils literal"><span class="pre">cdscan</span> <span class="pre">-x</span></code> command-line. The produced XML files are stored using the following filename :</p>
+<p><code class="docutils literal"><span class="pre">cmip5.&lt;model&gt;.&lt;experiment&gt;.&lt;ensemble&gt;.&lt;frequency&gt;.&lt;realm&gt;.&lt;MIP_table&gt;.&lt;variable&gt;.&lt;version&gt;.xml</span></code></p>
 <p>and building the following tree:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -224,18 +341,18 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Input directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/esgf/process/$PROJECT/merge/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/esgf/process/$PROJECT/merge/.</span></code></td>
 </tr>
 <tr class="row-even"><td>Output directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/CMIP5/cdscan/$EXPERIMENT/$REALM/$FREQUENCY/$VARIABLE/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/CMIP5/cdscan/$EXPERIMENT/$REALM/$FREQUENCY/$VARIABLE/.</span></code></td>
 </tr>
 </tbody>
 </table>
-<p>Consequently, each variable directory groups the XML aggregations of all ensembles of all models. These XML aggregations can be used with <tt class="docutils literal"><span class="pre">cdms</span></tt> python-module from <a class="reference external" href="https://github.com/UV-CDAT">CDAT</a> using a simple: <tt class="docutils literal"><span class="pre">cdms.open('aggregation.xml')</span></tt>.</p>
+<p>Consequently, each variable directory groups the XML aggregations of all ensembles of all models. These XML aggregations can be used with <code class="docutils literal"><span class="pre">cdms</span></code> python-module from <a class="reference external" href="https://github.com/UV-CDAT">CDAT</a> using a simple: <code class="docutils literal"><span class="pre">cdms.open('aggregation.xml')</span></code>.</p>
 </div>
 <div class="section" id="copy-to-end-user-disk-space">
 <h3>6. Copy to end-user disk space<a class="headerlink" href="#copy-to-end-user-disk-space" title="Permalink to this headline">¶</a></h3>
-<p>After clean the corresponding output directory for end-user, this step only creates a hard links for each file from the atomic dataset. The status of the corresponding entry in the database is then set to <tt class="docutils literal"><span class="pre">done</span></tt>.</p>
+<p>After clean the corresponding output directory for end-user, this step only creates a hard links for each file from the atomic dataset. The status of the corresponding entry in the database is then set to <code class="docutils literal"><span class="pre">done</span></code>.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="29%" />
@@ -243,10 +360,10 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Input directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/esgf/process/$PROJECT/merge/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/esgf/process/$PROJECT/merge/.</span></code></td>
 </tr>
 <tr class="row-even"><td>Output directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/CMIP5/main/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/CMIP5/main/.</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -266,18 +383,18 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Input directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/CMIP5/main/[...]/$VERSION</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/CMIP5/main/[...]/$VERSION</span></code></td>
 </tr>
 <tr class="row-even"><td>Output directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/CMIP5/main/[...]/latest</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/CMIP5/main/[...]/latest</span></code></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="xml-latest-symlink">
 <h3>8. XML latest symlink<a class="headerlink" href="#xml-latest-symlink" title="Permalink to this headline">¶</a></h3>
-<p>For a more clearer experience, we decided to create latest symbolic link for <tt class="docutils literal"><span class="pre">cdscan</span></tt> aggregations using the following filename:</p>
-<p><tt class="docutils literal"><span class="pre">cmip5.&lt;model&gt;.&lt;experiment&gt;.&lt;ensemble&gt;.&lt;frequency&gt;.&lt;realm&gt;.&lt;MIP_table&gt;.&lt;variable&gt;.latest.xml</span></tt></p>
+<p>For a more clearer experience, we decided to create latest symbolic link for <code class="docutils literal"><span class="pre">cdscan</span></code> aggregations using the following filename:</p>
+<p><code class="docutils literal"><span class="pre">cmip5.&lt;model&gt;.&lt;experiment&gt;.&lt;ensemble&gt;.&lt;frequency&gt;.&lt;realm&gt;.&lt;MIP_table&gt;.&lt;variable&gt;.latest.xml</span></code></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
@@ -285,19 +402,19 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Input directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/CMIP5/cdscan/$EXPERIMENT/$REALM/$FREQUENCY/$VARIABLE/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/CMIP5/cdscan/$EXPERIMENT/$REALM/$FREQUENCY/$VARIABLE/.</span></code></td>
 </tr>
 <tr class="row-even"><td>Output directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/CMIP5/cdscan/$EXPERIMENT/$REALM/$FREQUENCY/$VARIABLE/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/CMIP5/cdscan/$EXPERIMENT/$REALM/$FREQUENCY/$VARIABLE/.</span></code></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="mapfiles-generation">
 <h3>9. Mapfiles generation<a class="headerlink" href="#mapfiles-generation" title="Permalink to this headline">¶</a></h3>
-<p>The IPSL <a class="reference external" href="http://esgf-local.ipsl.fr/">ESG-F private node</a> is hosted on a remote VM and is dedicated to <tt class="docutils literal"><span class="pre">synda</span></tt> requests publication. One a dataset is completely processed through the pipeline, the publication kicks off. The publication process on <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a> nodes requires <em>mapfiles</em>. Mapfiles are text files where each line describes a file to publish.</p>
-<p>The <tt class="docutils literal"><span class="pre">esg_mapfiles</span></tt> command-line tool is a flexible alternative to easily generate mapfiles independently from ESG-F nodes. All generated mapfiles are stored in <em>pending directory</em> awaiting publication. We decided to generate one mapfile per dataset for clearer publication management.</p>
-<p>Please refer to <a class="reference external" href="http://esgf-mapfiles.readthedocs.org/en/latest/"><tt class="docutils literal"><span class="pre">esg_mapfiles</span></tt> documentation</a> for further information.</p>
+<p>The IPSL <a class="reference external" href="http://esgf-local.ipsl.fr/">ESG-F private node</a> is hosted on a remote VM and is dedicated to <code class="docutils literal"><span class="pre">synda</span></code> requests publication. One a dataset is completely processed through the pipeline, the publication kicks off. The publication process on <a class="reference external" href="http://pcmdi9.llnl.gov/">ESG-F</a> nodes requires <em>mapfiles</em>. Mapfiles are text files where each line describes a file to publish.</p>
+<p>The <code class="docutils literal"><span class="pre">esg_mapfiles</span></code> command-line tool is a flexible alternative to easily generate mapfiles independently from ESG-F nodes. All generated mapfiles are stored in <em>pending directory</em> awaiting publication. We decided to generate one mapfile per dataset for clearer publication management.</p>
+<p>Please refer to <a class="reference external" href="http://esgf-mapfiles.readthedocs.org/en/latest/"><code class="docutils literal"><span class="pre">esg_mapfiles</span></code> documentation</a> for further information.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="27%" />
@@ -305,10 +422,10 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Input directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/CMIP5/main/[...]/$VERSION</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/CMIP5/main/[...]/$VERSION</span></code></td>
 </tr>
 <tr class="row-even"><td>Output directory</td>
-<td><tt class="docutils literal"><span class="pre">/prodigfs/esgf/$PROJECT/mapfiles/pending/.</span></tt></td>
+<td><code class="docutils literal"><span class="pre">/prodigfs/esgf/$PROJECT/mapfiles/pending/.</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -335,8 +452,8 @@
 <div class="section" id="search-and-get-mip-aggregations">
 <h2>Search and get MIP aggregations<a class="headerlink" href="#search-and-get-mip-aggregations" title="Permalink to this headline">¶</a></h2>
 <p>The search-API from <a class="reference external" href="http://esgf-local.ipsl.fr/esgf-web-fe/">ESG-F front-ends</a> displays the results of your request using an <em>OR</em> logical operator. For example, this means you cannot select the temperature <strong>AND</strong> the precitation for the same model or institute.</p>
-<p><tt class="docutils literal"><span class="pre">find_agg</span></tt> is a command-line tool allowing you to find and list the available MIP aggregations on the <a class="reference external" href="http://esgf-local.ipsl.fr/esgf-web-fe/">IPSL private ESG-F archive</a> in a fast and researcher-friendly way. This tool includes search over <a class="reference external" href="http://www.unidata.ucar.edu/software/thredds/current/tds/">THREDDS/OpenDAP</a> and/or XML aggregations. <tt class="docutils literal"><span class="pre">find_agg</span></tt> follows <strong>ALL</strong> your requirements: all returned models satisfy your entire request.</p>
-<p>Please refer to <a class="reference external" href="http://cmip5-find-agg.readthedocs.org/en/latest/"><tt class="docutils literal"><span class="pre">find_agg</span></tt> documentation</a> for further information.</p>
+<p><code class="docutils literal"><span class="pre">find_agg</span></code> is a command-line tool allowing you to find and list the available MIP aggregations on the <a class="reference external" href="http://esgf-local.ipsl.fr/esgf-web-fe/">IPSL private ESG-F archive</a> in a fast and researcher-friendly way. This tool includes search over <a class="reference external" href="http://www.unidata.ucar.edu/software/thredds/current/tds/">THREDDS/OpenDAP</a> and/or XML aggregations. <code class="docutils literal"><span class="pre">find_agg</span></code> follows <strong>ALL</strong> your requirements: all returned models satisfy your entire request.</p>
+<p>Please refer to <a class="reference external" href="http://cmip5-find-agg.readthedocs.org/en/latest/"><code class="docutils literal"><span class="pre">find_agg</span></code> documentation</a> for further information.</p>
 </div>
 <div class="section" id="web-processing-services-wps">
 <h2>Web Processing Services (WPS)<a class="headerlink" href="#web-processing-services-wps" title="Permalink to this headline">¶</a></h2>
@@ -345,74 +462,20 @@
 </div>
 
 
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Analysis plateform</a><ul>
-<li><a class="reference internal" href="#post-processing-pipeline-for-mip-data">Post-processing pipeline for MIP data</a><ul>
-<li><a class="reference internal" href="#overview">Overview</a></li>
-<li><a class="reference internal" href="#data-request-and-downaloading">1. Data request and downaloading</a></li>
-<li><a class="reference internal" href="#products-merging">2. Products merging</a></li>
-<li><a class="reference internal" href="#overlaps-removing">3. Overlaps removing</a></li>
-<li><a class="reference internal" href="#time-axis-normalization">4. Time axis normalization</a></li>
-<li><a class="reference internal" href="#cdscan-xml-aggregations">5. cdscan/XML aggregations</a></li>
-<li><a class="reference internal" href="#copy-to-end-user-disk-space">6. Copy to end-user disk space</a></li>
-<li><a class="reference internal" href="#netcdf-latest-symlink">7. NetCDF latest symlink</a></li>
-<li><a class="reference internal" href="#xml-latest-symlink">8. XML latest symlink</a></li>
-<li><a class="reference internal" href="#mapfiles-generation">9. Mapfiles generation</a></li>
-<li><a class="reference internal" href="#thredds-opendap-aggregations">11. THREDDS/OpenDAP aggregations</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#search-and-get-mip-aggregations">Search and get MIP aggregations</a></li>
-<li><a class="reference internal" href="#web-processing-services-wps">Web Processing Services (WPS)</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="synchronization.html"
-                        title="previous chapter">Data synchronization</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/analysis.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
+    </div>
+      
+  </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="synchronization.html" title="Data synchronization"
-             >previous</a> |</li>
-        <li><a href="index.html">Prodiguer Documentation 1.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2015, Prodiguer Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
-    </div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Prodiguer Team.<br/>
+    </p>
+  </div>
+</footer>
   </body>
 </html>

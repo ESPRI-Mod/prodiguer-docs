@@ -1,17 +1,28 @@
+.. _AMQP: https://www.amqp.org/
+.. _libIGCM : http://forge.ipsl.jussieu.fr/libigcm
+.. _IPSL: http://www.ipsl.fr/
+
 Messaging plateform
 ===================
 
 Introduction
 ------------
 
+The PRODIGUER messaging platform supports the development of climate simulation downstream applications by providing a messaging transport and persistence layer. Current focuses are on simulation robustness and metrics collections. This messaging platform is a distributed computing environment based upon the Advanced Message Queuing Protocol (`AMQP`_). A network of `AMQP`_ servers support the dispatch and processing of messages. A message consists of a header and content: headers contain standardised fields whereas content is specific to each application.
+
 Monitoring
 ----------
 
-Synopsis
-********
+During simulation execution the `libIGCM`_ runtime environment dispatches simulation monitoring messages to the central Prodiguer MQ server. Received messages drive downstream applications such as the Simulation Monitoring web application or the Supervisor machine intelligence application.
+
+The Simulation Monitoring application is built ontop of the Prodiguer messaging platform. The `libIGCM`_ simulation runtime environment controls the workflow of a simulation. At various points in the workflow, messages are generated and dispatched (in batches) to the central Prodiguer MQ server. The messages encapsulate significant events in the lifetime of a simulation.
+
+Received messages are persisted and drive downstream applications such as the Simulation Monitoring web application and the Supervisor machine intelligence daemon. The former supports real-time simulation monitoring whilst the latter support real-time simulation control.
 
 libIGCM
 *******
+
+The `IPSL`_ climate modelling section set up an infrastructure around the `IPSL`_ coupled model to access, launch and chain simulation and post-processing (time series, atlas, monitoring) of a climate model simultion. In order to facilitate consistent implementation of coupled model configurations, all or part of the climate model launches rewriting scripts experiences. The corresponding job is modular and flexible for a number of configurations and keep their consistency. The proposed structure is based on a new design of operation that wants to provide clarity and flexibility both at a beginner user, as an experienced user.
 
 Prodiguer Shell
 ***************
@@ -25,6 +36,12 @@ Prodiguer Controlled Vocabulary
 Simulation metrics
 ------------------
 
+Metrics characterizing simulations ability to reproduce observed climate are computed at each computing center during simulation execution. The so called "simulation metrics" are dispatched to the central Prodiguer MQ server where they are persisted and made available for downstream exploitation (e.g. visualizations).
+
+As simulations run within HPC environments there is the need to gather metrics in the form of 2D matrices synthesizing relevant climate information. Each type of metrics contains standard information such as institute, model, etc. and custom information specific to the type of metric being collected. Such information can be used by reporting and visualization applications.
+
+The `IPSL`_ simulation runtime environment (`libIGCM`_) has been extended to support the publishing of simulation metrics. At runtime simulation metrics are published to the Prodiguer messaging platform. The published metrics are processed at `IPSL`_ servers in Paris and persisted within a NOSql (`MongoDB <https://www.mongodb.org/>`_) database. They then become available to downstream applications such as the "metrics garden".
+
 Prodiguer Metrics Formatter
 ***************************
 
@@ -33,3 +50,5 @@ Prodiguer Client
 
 Environment metrics
 -------------------
+
+HPC environment related metrics are gathered at each computing center during simulation execution. The so called "environment metrics" are dispatched to the central Prodiguer MQ server where they are persisted and made available for downstream exploitation (e.g. visualizations).
