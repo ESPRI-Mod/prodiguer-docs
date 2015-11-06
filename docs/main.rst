@@ -96,3 +96,5 @@ Communications
 * :download:`2010 - EGU talk M. GREENSLADE <downloads/EGU_2010-ESS18-IPSL-PRODIGUER.odp>`
 * :download:`2014 - EGU poster N. CARENTON <downloads/IPSL_EGU_2014_ESGF-TEST-SUITE_POSTER_NCarenton_30-04-2014.pptx>`
 * :download:`2014 - ESGF France meeting <downloads/ESGF-France.odp>`
+* :download:`2015 - EGU talk M. GREENSLADE <downloads/EGU-2015-ESSI2.6-PRESENTATION-IPSL-PRODIGUER-MESSAGING-PLATFORM.pdf>`
+* :download:`2015 - AGU poster M. GREENSLADE <downloads/AGU-Poster-2015.pdf>`
