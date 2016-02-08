@@ -7,10 +7,10 @@ Analysis plateform
 The PRODIGUER working team provides a set of specialized tools design to streamline and to ease analysis of data coming from the `ESG-F`_ distributed digital repositories. These tools are available as stand-alone command-line. They are also part of a post-processing pipeline deployed on CICLAD cluster as follows.
 
 .. image:: images/SDPPP-schema.png
-   :scale: 50 %
+   :scale: 20 %
    :align: center
 
-Large size : [http://dods.ipsl.jussieu.fr/glipsl/SDPPP-schema.png](http://dods.ipsl.jussieu.fr/glipsl/SDPPP-schema.png)
+Large size : `SDPPP-schema.png <http://dods.ipsl.jussieu.fr/glipsl/SDPPP-schema.png>`_
 
 Post-processing pipeline for MIP data
 -------------------------------------
