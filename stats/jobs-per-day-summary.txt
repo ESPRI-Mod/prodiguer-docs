@@ -1,5 +1,6 @@
-Report Title:   Summary of simulation jobs per day per accounting project
-Report Date:    11.02.2016
+Report Title:     Summary of simulation jobs per day per accounting project
+Report Date:      2016-02-11
+Report Interval:  2015-10-20 - 2016-02-10 (113 days)
 
    Acc. Project   Min     Max     Avg
 
