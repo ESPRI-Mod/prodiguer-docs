@@ -1,0 +1,22 @@
+Report date: 11.02.2016
+
+   Acc. Project   Min     Max     Avg
+
+            cps     0     337      24
+            dzt     0       1       0
+            fry     0      84      11
+        gen0040     0     137       5
+        gen0826     0      22       3
+        gen1167     0       2       0
+        gen2201     0     259      16
+        gen2212     0      46       1
+        gen6328     0    2488     371
+        gen6877     0     122       4
+        gen7403     0      17       0
+       gencmip6     0     597     112
+            gzi     0     390      55
+            lmd     0     377      14
+            omr     0     572      83
+            psl     0       5       1
+         ra2641     0      10       0
+            tij     0       1       0
