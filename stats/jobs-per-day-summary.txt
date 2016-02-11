@@ -1,4 +1,5 @@
-Report date: 11.02.2016
+Report Title:   Summary of simulation jobs per day per accounting project
+Report Date:    11.02.2016
 
    Acc. Project   Min     Max     Avg
 
