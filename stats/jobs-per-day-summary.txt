@@ -1,4 +1,32 @@
 Report Title:     Summary of simulation jobs per day per accounting project
+Report Date:      2016-03-03
+Report Interval:  2015-10-20 - 2016-03-02 (134 days)
+
+   Acc. Project       Min       Max       Avg
+
+            cps         0       337     22.90
+            dzt         0         1      0.02
+            fry         0        84     15.81
+        gen0040         0       137      7.78
+        gen0826         0        22      3.69
+        gen1167         0         9      0.16
+        gen2201         0       259     18.72
+        gen2212         0       191      2.90
+        gen6328         0      2488    372.90
+        gen6877         0       122      4.63
+        gen7403         0       371     10.18
+       gencmip6         0       880    196.98
+            gzi         0       788     84.88
+            lmd         0       522     19.77
+            omr         0       572     70.82
+            psl         0         5      1.34
+         ra2641         0        30      0.54
+            tij         0         1      0.01
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+Report Title:     Summary of simulation jobs per day per accounting project
 Report Date:      2016-02-11
 Report Interval:  2015-10-20 - 2016-02-10 (113 days)
 

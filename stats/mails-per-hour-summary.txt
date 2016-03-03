@@ -1,4 +1,32 @@
 Report Title:     Summary of incoming mails per hour per accounting project
+Report Date:      2016-03-03
+Report Interval:  2016-02-19 - 2016-03-02 (12 days)
+
+   Acc. Project       Min       Max       Avg
+
+            cps         0        38      0.90
+            dzt         0         0      0.00
+            fry         0         9      1.63
+        gen0040         0         4      0.05
+        gen0826         0         6      0.23
+        gen1167         0         0      0.00
+        gen2201         0        16      1.40
+        gen2212         0        53     10.11
+        gen6328         0       103     19.98
+        gen6877         0        79      0.33
+        gen7403         0        97      4.77
+       gencmip6         0       140     44.90
+            gzi         0       124     17.47
+            lmd         0         0      0.00
+            omr         0        53      2.06
+            psl         0         5      0.08
+         ra2641         0         3      0.02
+            tij         0         0      0.00
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+
+Report Title:     Summary of incoming mails per hour per accounting project
 Report Date:      2016-02-12
 Report Interval:  2016-01-29 - 2016-02-11 (13 days)
 
