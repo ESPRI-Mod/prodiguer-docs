@@ -1,5 +1,5 @@
 - 2 sets of time series, daily & monthly.
 
-- Data to be pushed to Prodiguer messaging platform from libIGCM and then persisted to Prodiguer database(s)
+- Data to be pushed to HERMES messaging platform from libIGCM and then persisted to HERMES database(s)
 
 - 
