@@ -40,8 +40,6 @@ Core team
 +-----------------------+-------------+----------------------------+
 | Guillaume LEVAVASSEUR | IPSL/UPMC   | glipsl@ipsl.jussieu.fr     |
 +-----------------------+-------------+----------------------------+
-| Nicolas CARENTON      | IPSL/CNRS   | ncarenton@ipsl.jussieu.fr  |
-+-----------------------+-------------+----------------------------+
 | Mark GREENSLADE       | IPSL/UPMC   | momipsl@ipsl.jussieu.fr    |
 +-----------------------+-------------+----------------------------+
 | Jérôme RACIAZEK       | IPSL/CNRS   | jripsl@ipsl.jussieu.fr     |
@@ -50,6 +48,9 @@ Core team
 +-----------------------+-------------+----------------------------+
 | Atef BENNASSER        | IPSL/UPMC   | abennasser@ipsl.jussieu.fr |
 +-----------------------+-------------+----------------------------+
+| Xia JIN               | IPSL/CEA    | xjin@ipsl.jussieu.fr       |
++-----------------------+-------------+----------------------------+
+
 
 Development guidelines
 ----------------------
